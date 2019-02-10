@@ -1,0 +1,10 @@
+[Unit]
+Description=Set up a random MAC for all network devices
+Before=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/random-mac
+
+[Install]
+WantedBy=multi-user.target

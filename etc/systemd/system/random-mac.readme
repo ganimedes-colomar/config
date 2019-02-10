@@ -1,0 +1,4 @@
+# 1.	sudo systemctl daemon-reload
+# 2.	sudo systemctl enable random-mac
+# 3.	sudo chmod +x /usr/local/sbin/random-mac
+# 4.	sudo init 6
