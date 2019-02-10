@@ -4,7 +4,7 @@
 # Please use systemd version
 ################################################################################
 #
-# Change MAC to random value
+# Set up a random MAC for all network devices
 #
 ################################################################################
 
