@@ -1,4 +1,7 @@
-#!/bin/bash
+#!/bin/sh
+################################################################################
+# Deprecated in systemd systems!
+# Please use systemd version
 ################################################################################
 #
 # Change MAC to random value
@@ -9,13 +12,13 @@
 ################################################################################
 #	functions							       #
 ################################################################################
-function find_cards
+find_cards()
 {
 
 	cards="$(ip a|grep ^[0-9]|cut -d\: -f2|grep -v \ lo)"
 }
 
-function change_mac
+change_mac()
 {
 	local	card=${1}
 
