@@ -1,0 +1,4 @@
+gani	ALL=(ALL:ALL) ALL
+alex	ALL=(ALL:ALL) ALL
+tere	ALL=(ALL:ALL) /usr/sbin/init
+sebas	ALL=(ALL:ALL) ALL
