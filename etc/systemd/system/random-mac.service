@@ -1,6 +1,6 @@
 ################################################################################
-#	Copyright (C) 2019	Alejandro Colomar Andrés		       #
-#	SPDX-License-Identifier:	LGPL-2.0-only			       #
+#	Copyright (C) 2019		Alejandro Colomar Andres	       #
+#	SPDX-License-Identifier:	ISC				       #
 ################################################################################
 [Unit]
 Description=Set up a random MAC for all network devices
