@@ -1,1 +1,1 @@
-# scripts-linux
+Linux configuration files
