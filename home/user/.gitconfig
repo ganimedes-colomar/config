@@ -1,9 +1,19 @@
-[user]
-	email = colomar.6.4.3@gmail.com
-	name = Alejandro Colomar
+[alias]
+	lg = log --graph --abbrev-commit --decorate \
+		--format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+	tree = lg --all
 [color]
 	ui = auto
-[alias]
-	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+[core]
+	editor = vim
 [pull]
 	ff = only
+[sendemail]
+	smtpuser = alx.manpages
+	smtpserver = smtp.googlemail.com
+	smtpencryption = tls
+	smtpserverport = 587
+	smtpPass = <passwd>
+[user]
+	name = Alejandro Colomar
+	email = alx.manpages@gmail.com
