@@ -54,9 +54,24 @@ function pdfman()
 		return ${EX_USAGE};
 	fi;
 
-	man -Tps -l $1 \
+	man -Tps -l ${1} \
 	|ps2pdf - - \
 	|zathura -;
+}
+
+##########################################################################
+##
+function grep_syscall_wrapper()
+{
+	if ! [ -v 2 ]; then
+		>&2 echo "Usage: ${FUNCNAME[0]} <return type> <syscall>";
+		return ${EX_USAGE};
+	fi
+
+	find * -type f \
+	|grep '\.h$' \
+	|xargs pcregrep -Mn "(?s)^[\w\s]*${1}\s*${2}\s*\(.*?;" \
+	|sed 's/^[^:]*:[0-9]*:/&\n/';
 }
 
 ##########################################################################
