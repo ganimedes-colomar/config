@@ -25,13 +25,13 @@ function grep_syscall()
 	|grep '\.c$' \
 	|sort -V \
 	|xargs pcregrep -Mn "(?s)^[\w_]*SYSCALL_DEFINE.\(${1},.*?\)" \
-	|sed 's/^[^:]*:[0-9]*:/&\n/';
+	|sed -E 's/^[^:]+:[0-9]+:/&\n/';
 
 	find * -type f \
 	|grep '\.h$' \
 	|sort -V \
-	|xargs pcregrep -Mn "(?s)^asmlinkage [\w_\d]* sys_${1}\(.*?\)" \
-	|sed 's/^[^:]*:[0-9]*:/&\n/';
+	|xargs pcregrep -Mn "(?s)^asmlinkage [\w_\d]+ sys_${1}\(.*?\)" \
+	|sed -E 's/^[^:]+:[0-9]+:/&\n/';
 }
 
 function grep_syscall_def()
@@ -45,7 +45,7 @@ function grep_syscall_def()
 	|grep '\.c$' \
 	|sort -V \
 	|xargs pcregrep -Mn "(?s)^[\w_]*SYSCALL_DEFINE.\(${1},.*?^}" \
-	|sed 's/^[^:]*:[0-9]*:/&\n/';
+	|sed -E 's/^[^:]+:[0-9]+:/&\n/';
 }
 
 ##########################################################################
@@ -74,8 +74,8 @@ function grep_syscall_wrapper()
 	find * -type f \
 	|grep '\.h$' \
 	|sort -V \
-	|xargs pcregrep -Mn "(?s)^[\w\s]*${1}\s*${2}\s*\(.*?;" \
-	|sed 's/^[^:]*:[0-9]*:/&\n/';
+	|xargs pcregrep -Mn "(?s)^[\w\s]*${1}\s+${2}\s*\(.*?;" \
+	|sed -E 's/^[^:]+:[0-9]+:/&\n/';
 }
 
 ##########################################################################
