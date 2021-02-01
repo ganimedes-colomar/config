@@ -66,15 +66,15 @@ function pdfman()
 ##
 function grep_syscall_wrapper()
 {
-	if ! [ -v 2 ]; then
-		>&2 echo "Usage: ${FUNCNAME[0]} <return type> <syscall>";
+	if ! [ -v 1 ]; then
+		>&2 echo "Usage: ${FUNCNAME[0]} <syscall>";
 		return ${EX_USAGE};
 	fi
 
 	find * -type f \
 	|grep '\.h$' \
 	|sort -V \
-	|xargs pcregrep -Mn "(?s)^[\w\s]*${1}\s+${2}\s*\(.*?;" \
+	|xargs pcregrep -Mn "(?s)^[\w\s]*[\w_\d]+\s+${1}\s*\(.*?;" \
 	|sed -E 's/^[^:]+:[0-9]+:/&\n/';
 }
 
