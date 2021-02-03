@@ -96,7 +96,7 @@ function grep_syscall_wrapper()
 	|grep '\.h$' \
 	|sort -V \
 	|xargs pcregrep -Mn \
-	  "^[^\s][\w\s]+\s+\**${1}\s*\((?s)[\w\s()[\]*,]*?(...)?\)[\w\s()]*;" \
+	  "(?s)^[^\s#][\w\s]+\s+\**${1}\s*\([\w\s()[\]*,]*?(...)?\)[\w\s()]*;" \
 	|sed -E 's/^[^:]+:[0-9]+:/&\n/';
 }
 
