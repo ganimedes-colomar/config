@@ -28,9 +28,9 @@ function grep_syscall()
 	|sed -E 's/^[^:]+:[0-9]+:/&\n/';
 
 	find * -type f \
-	|grep '\.h$' \
+	|grep '\.[ch]$' \
 	|sort -V \
-	|xargs pcregrep -Mn "(?s)^asmlinkage \w+ \**sys_${1}\(.*?\)" \
+	|xargs pcregrep -Mn "(?s)^asmlinkage\s+[\w\s]+\**sys_${1}\s*\(.*?\)" \
 	|sed -E 's/^[^:]+:[0-9]+:/&\n/';
 }
 
