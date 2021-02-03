@@ -95,7 +95,8 @@ function grep_syscall_wrapper()
 	find * -type f \
 	|grep '\.h$' \
 	|sort -V \
-	|xargs pcregrep -Mn "(?s)^extern [\w\s]+\s+\**${1}\s*\(.*?;" \
+	|xargs pcregrep -Mn \
+		"^[^\s][\w\s]+\s+\**${1}\s*\((?s)[\w\s()*,]*?(...)?\)[\w\s()]*;" \
 	|sed -E 's/^[^:]+:[0-9]+:/&\n/';
 }
 
