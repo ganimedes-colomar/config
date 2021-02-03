@@ -30,7 +30,7 @@ function grep_syscall()
 	find * -type f \
 	|grep '\.h$' \
 	|sort -V \
-	|xargs pcregrep -Mn "(?s)^asmlinkage [\w_\d]+ sys_${1}\(.*?\)" \
+	|xargs pcregrep -Mn "(?s)^asmlinkage \w+ \**sys_${1}\(.*?\)" \
 	|sed -E 's/^[^:]+:[0-9]+:/&\n/';
 }
 
@@ -95,7 +95,7 @@ function grep_syscall_wrapper()
 	find * -type f \
 	|grep '\.h$' \
 	|sort -V \
-	|xargs pcregrep -Mn "(?s)^extern [\w_\d\s]+\s+${1}\s*\(.*?;" \
+	|xargs pcregrep -Mn "(?s)^extern [\w\s]+\s+\**${1}\s*\(.*?;" \
 	|sed -E 's/^[^:]+:[0-9]+:/&\n/';
 }
 
