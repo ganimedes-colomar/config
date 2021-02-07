@@ -85,10 +85,10 @@ function pdfman()
 
 ##########################################################################
 ##
-function grep_syscall_wrapper()
+function grep_glibc_prototype()
 {
 	if ! [ -v 1 ]; then
-		>&2 echo "Usage: ${FUNCNAME[0]} <syscall>";
+		>&2 echo "Usage: ${FUNCNAME[0]} <func>";
 		return ${EX_USAGE};
 	fi
 
