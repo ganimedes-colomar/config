@@ -54,7 +54,7 @@ function man_section()
 {
 	if ! [ -v 2 ]; then
 		>&2 echo "Usage: ${FUNCNAME[0]} <dir> <section>";
-		return ${EX_USAGE}
+		return ${EX_USAGE};
 	fi
 
 	find "${1}" -type f \
@@ -88,12 +88,12 @@ function man_lsfunc()
 			-e "/^\.SH SYNOPSIS/,/^\.SH/{/^\.SH/!p}" \
 		|sed \
 			-e '/Feature/,$d' \
-			-e '/:/,$d' \
+			-e '/{/,/}/d' \
 		|man -P cat -l - 2>/dev/null;
 	done \
 	|sed -n "/^SYNOPSIS/,/^\w/p" \
 	|grep '^       \w' \
-	|grep -v '[{}]' \
+	|grep -v ':' \
 	|sed 's/^[^(]* \**\(\w*\)(.*/\1/' \
 	|grep '^\w' \
 	|uniq;
