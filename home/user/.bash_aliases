@@ -8,3 +8,5 @@ if [ -d "${_d}/.bash_aliases.d" ]; then
 		. "${f}";
 	done;
 fi;
+
+. ~/src/linux/man-pages/scripts/bash_aliases;
