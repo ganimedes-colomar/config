@@ -9,4 +9,6 @@ if [ -d "${_d}/.bash_aliases.d" ]; then
 	done;
 fi;
 
-. ~/src/linux/man-pages/scripts/bash_aliases;
+if [ -f ~/src/linux/man-pages/scripts/bash_aliases ]; then
+	. ~/src/linux/man-pages/scripts/bash_aliases;
+fi;
