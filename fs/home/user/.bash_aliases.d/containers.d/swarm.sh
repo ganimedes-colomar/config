@@ -28,13 +28,13 @@ function alx_swarm_deploy()
 		return ${EX_NOPERM};
 	fi;
 
-	alx_cp_configs;
-	alx_cp_secrets;
+	alx_cp_configs||:;
+	alx_cp_secrets||:;
 
 	docker stack deploy -c "etc/docker/swarm/compose.yaml" "${stack}";
 
-	alx_shred_secrets;
-	alx_shred_configs;
+	alx_shred_secrets||:;
+	alx_shred_configs||:;
 }
 
 function alx_swarm_delete()

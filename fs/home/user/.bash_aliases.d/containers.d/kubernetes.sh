@@ -28,7 +28,7 @@ function alx_kube_create_configmaps__()
 		return ${EX_NOPERM};
 	fi;
 
-	alx_cp_configs;
+	alx_cp_configs||:;
 
 	local project="$(find run/configs/* -maxdepth 0 | xargs basename)";
 
@@ -42,7 +42,7 @@ function alx_kube_create_configmaps__()
 		 ${kubectl} create configmap 'cm' --from-file ${f} -n "${ns}";
 	done;
 
-	alx_shred_configs;
+	alx_shred_configs||:;
 }
 
 function alx_kube_create_secrets__()
@@ -61,7 +61,7 @@ function alx_kube_create_secrets__()
 		return ${EX_NOPERM};
 	fi;
 
-	alx_cp_secrets;
+	alx_cp_secrets||:;
 
 	local project="$(find run/secrets/* -maxdepth 0 | xargs basename)";
 
@@ -75,7 +75,7 @@ function alx_kube_create_secrets__()
 		 ${kubectl} create secret generic 'sec' --from-file ${f} -n "${ns}";
 	done;
 
-	alx_shred_secrets;
+	alx_shred_secrets||:;
 }
 
 function alx_kube_deploy()
