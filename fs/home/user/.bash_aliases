@@ -1,6 +1,6 @@
-ALX_BASH_ALIASES="${BASH_SOURCE[0]}";
-
 unset $(set | grep '^ALX_' | cut -f1 -d=);
+
+ALX_BASH_ALIASES="${BASH_SOURCE[0]}";
 
 _d="$(dirname "${BASH_SOURCE[0]}")";
 if [ -d "${_d}/.bash_aliases.d" ]; then
