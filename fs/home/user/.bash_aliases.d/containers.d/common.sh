@@ -18,6 +18,8 @@ function alx_cp_configs()
 		>&2 echo "Usage: sudo ${FUNCNAME[0]}";
 		return ${EX_NOPERM};
 	fi;
+	! [ -d run/configs/* ] \
+		&&return ${EX_NOINPUT};
 
 	mkdir -pv /run/configs/;
 	cp --remove-destination -Lrvt /run/configs/ run/configs/* ||:;
@@ -29,11 +31,13 @@ function alx_shred_configs()
 		>&2 echo "Usage: sudo ${FUNCNAME[0]}";
 		return ${EX_NOPERM};
 	fi;
+	! [ -d run/configs/* ] \
+		&&return ${EX_NOINPUT};
 
 	local project="$(find run/configs/* -maxdepth 0 | xargs basename)";
 
 	find -L "/run/configs/${project}/" -type f \
-	|xargs shred -f --remove=wipe ||:;
+	|xargs shred -f --remove=wipe;
 	rm -rfv "/run/configs/${project}/";
 }
 
@@ -43,6 +47,8 @@ function alx_cp_secrets()
 		>&2 echo "Usage: sudo ${FUNCNAME[0]}";
 		return ${EX_NOPERM};
 	fi;
+	! [ -d run/secrets/* ] \
+		&&return ${EX_NOINPUT};
 
 	mkdir -pv /run/secrets/;
 	cp --remove-destination -Lrvt /run/secrets/ run/secrets/* ||:;
@@ -54,10 +60,12 @@ function alx_shred_secrets()
 		>&2 echo "Usage: sudo ${FUNCNAME[0]}";
 		return ${EX_NOPERM};
 	fi;
+	! [ -d run/secrets/* ] \
+		&&return ${EX_NOINPUT};
 
 	local project="$(find run/secrets/* -maxdepth 0 | xargs basename)";
 
 	find -L "/run/secrets/${project}/" -type f \
-	|xargs shred -f --remove=wipe ||:;
+	|xargs shred -f --remove=wipe;
 	rm -rfv "/run/secrets/${project}/";
 }
