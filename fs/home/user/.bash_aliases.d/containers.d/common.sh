@@ -33,7 +33,7 @@ function alx_shred_configs()
 	local project="$(find run/configs/* -maxdepth 0 | xargs basename)";
 
 	find -L "/run/configs/${project}/" -type f \
-	|xargs shred -f --remove=wipe;
+	|xargs shred -f --remove=wipe ||:;
 	rm -rfv "/run/configs/${project}/";
 }
 
@@ -58,6 +58,6 @@ function alx_shred_secrets()
 	local project="$(find run/secrets/* -maxdepth 0 | xargs basename)";
 
 	find -L "/run/secrets/${project}/" -type f \
-	|xargs shred -f --remove=wipe;
+	|xargs shred -f --remove=wipe ||:;
 	rm -rfv "/run/secrets/${project}/";
 }
