@@ -1,0 +1,112 @@
+#AcceptEnv
+AddressFamily			inet
+AllowAgentForwarding		no
+#AllowGroups
+AllowStreamLocalForwarding	no
+
+AllowTcpForwarding		no
+AllowUsers			ubuntu
+AuthenticationMethods		publickey
+#AuthorizedKeysCommand
+#AuthorizedKeysCommandUser
+
+AuthorizedKeysFile		%h/.ssh/authorized_keys
+#AuthorizedPrincipalsCommand
+#AuthorizedPrincipalsCommandUser
+#AuthorizedPrincipalsFile
+Banner				none
+
+CASignatureAlgorithms		rsa-sha2-512,rsa-sha2-256
+ChallengeResponseAuthentication	no
+#ChrootDirectory
+Ciphers				chacha20-poly1305@openssh.com
+ClientAliveCountMax		3
+
+ClientAliveInterval		20
+Compression			yes
+DebianBanner			no
+#DenyGroups
+#DenyUsers
+DisableForwarding		yes
+
+ExposeAuthInfo			no
+FingerprintHash			sha256
+#ForceCommand
+GatewayPorts			no
+GSSAPIAuthentication		no
+
+GSSAPICleanupCredentials	yes
+GSSAPIStrictAcceptorCheck	yes
+HostbasedAcceptedKeyTypes	rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,rsa-sha2-512,rsa-sha2-256
+HostbasedAuthentication		no
+HostbasedUsesNameFromPacketOnly	no
+
+#HostCertificate
+HostKey				/etc/ssh/ssh_host_rsa_key
+#HostKeyAgent
+#HostKeyAlgorithms		rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,rsa-sha2-512,rsa-sha2-256
+IgnoreRhosts			yes
+
+IgnoreUserKnownHosts		no
+#Include
+IPQoS				lowdelay throughput
+KbdInteractiveAuthentication	no
+KerberosAuthentication		no
+
+KerberosGetAFSToken		no
+KerberosOrLocalPasswd		no
+KerberosTicketCleanup		yes
+KexAlgorithms			curve25519-sha256,curve25519-sha256@libssh.org
+ListenAddress			0.0.0.0:22
+
+LoginGraceTime			60
+LogLevel			DEBUG3
+#LogVerbose
+MACs				hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com
+#Match
+
+MaxAuthTries			3
+MaxSessions			3
+MaxStartups			3
+PasswordAuthentication		no
+PermitEmptyPasswords		no
+
+PermitListen			none
+PermitOpen			none
+PermitRootLogin			no
+PermitTTY			yes
+PermitTunnel			no
+
+PermitUserEnvironment		no
+PermitUserRC			no
+PidFile				/var/run/sshd.pid
+#Port				22
+PrintLastLog			no
+
+PrintMotd			yes
+PubkeyAcceptedKeyTypes		rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,rsa-sha2-512,rsa-sha2-256
+PubkeyAuthOptions		touch-required
+PubkeyAuthentication		yes
+RekeyLimit			default 3600
+
+RevokedKeys			none
+#RDomain
+#SecurityKeyProvider
+#SetEnv
+StreamLocalBindMask		0177
+
+StreamLocalBindUnlink		no
+StrictModes			yes
+Subsystem			sftp /usr/lib/openssh/sftp-server
+SyslogFacility			AUTH
+TCPKeepAlive			no
+
+TrustedUserCAKeys		none
+UseDNS				no
+UsePAM				no
+VersionAddendum			none
+X11DisplayOffset		10
+X11Forwarding			no
+
+X11UseLocalhost			yes
+XAuthLocation			/usr/bin/xauth

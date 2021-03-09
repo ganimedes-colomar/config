@@ -23,6 +23,13 @@ groff:
 		install -DT "$$f" "$(DESTDIR)/$$f"; \
 	done;
 
+.PHONY: sshd
+sshd:
+	find etc/ssh/sshd* -type f \
+	|while read -r f; do \
+		install -DT "$$f" "$(DESTDIR)/$$f"; \
+	done;
+
 .PHONY: sudo
 sudo:
 	find etc/sudo* -type f \
