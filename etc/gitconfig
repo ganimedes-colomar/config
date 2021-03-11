@@ -22,7 +22,7 @@
 [checkout]
 	DefaultRemote = alx
 [commit]
-	gpgSign = true
+	gpgSign = false
 [core]
 	editor = vim
 	attributesFile = /etc/git/attributes
