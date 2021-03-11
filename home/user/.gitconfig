@@ -12,11 +12,11 @@
 [pull]
 	ff = only
 [sendemail]
-	smtpuser = alx.manpages
+	smtpuser = gacoan.linux
 	smtpserver = smtp.googlemail.com
 	smtpencryption = tls
 	smtpserverport = 587
 	smtpPass = <passwd>
 [user]
-	name = Alejandro Colomar
-	email = alx.manpages@gmail.com
+	name = Ganimedes Colomar
+	email = gacoan.linux@gmail.com
