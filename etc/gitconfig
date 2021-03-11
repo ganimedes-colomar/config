@@ -22,7 +22,7 @@
 	old = brightred
 	new = brightgreen
 [commit]
-	gpgSign = true
+	gpgSign = false
 [core]
 	editor = vim
 	attributesFile = /etc/git/attributes
