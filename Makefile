@@ -1,4 +1,4 @@
-DESTDIR=
+DESTDIR?=
 
 .PHONY: bash
 bash:
