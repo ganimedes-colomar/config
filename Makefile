@@ -1,5 +1,12 @@
 DESTDIR?=
 
+.PHONY: apt
+apt:
+	find etc/apt/ -type f \
+	|while read -r f; do \
+		install -DT "$$f" "$(DESTDIR)/$$f"; \
+	done;
+
 .PHONY: bash
 bash:
 	cd home/user/; \
