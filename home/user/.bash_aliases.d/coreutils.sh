@@ -4,4 +4,3 @@ ALX_COREUTILS_SH="${BASH_SOURCE[0]}";
 
 
 alias nauniq='awk '\''!mem[$0]++'\';
-alias sink='tee >/dev/null';
