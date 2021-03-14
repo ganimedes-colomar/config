@@ -1,0 +1,52 @@
+#!/bin/bash
+set -Eeuo pipefail;
+########################################################################
+#	Copyright (C) 2020        Alejandro Colomar Andres
+#	SPDX-License-Identifier:  GPL-2.0-only
+########################################################################
+
+synopsis="${BASH_SOURCE[0]} [OPTION]... STACKNAME";
+
+usage="\
+Usage:  ${synopsis}
+Try '${BASH_SOURCE[0]} -h' for more information.";
+
+help="\
+SYNOPSIS
+	${synopsis}
+
+DESCRIPTION
+	Delete docker swarm stack STACKNAME,
+
+OPTIONS
+	-h	Print this help and exit.
+
+ERRORS
+	EX_USAGE
+		Invalid or missing arguments or options.
+";
+
+EX_OK=0;
+EX_USAGE=64;
+
+while getopts 'h' opt; do
+	case ${opt} in
+	h)	echo "${help}";
+		exit ${EX_OK};
+		;;
+	?)	>&2 echo "${usage}";
+		exit ${EX_USAGE};
+		;;
+	esac;
+done;
+shift $((${OPTIND} - 1));
+
+if [ $# -ne 1 ]; then
+	>&2 echo "${usage}";
+	exit ${EX_USAGE};
+fi;
+s="$1";
+
+docker stack rm "${s}";
+
+exit ${EX_OK};

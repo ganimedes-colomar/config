@@ -1,0 +1,86 @@
+#!/bin/bash
+set -Eeuo pipefail;
+########################################################################
+#	Copyright (C) 2020-2021   Alejandro Colomar Andres
+#	SPDX-License-Identifier:  GPL-2.0-only
+########################################################################
+
+synopsis="${BASH_SOURCE[0]} [OPTION]... STACKNAME";
+
+usage="\
+Usage:  ${synopsis}
+Try '${BASH_SOURCE[0]} -h' for more information.";
+
+help="\
+SYNOPSIS
+	${synopsis}
+
+DESCRIPTION
+	Deploy a stack with name STACKNAME using an orchestrator.
+
+	File requirements:
+	Configs should be placed in <run/configs/PROJECT/>
+	Secrets should be placed in <run/secrets/PROJECT/>
+
+	sudo is required to copy some files to /run.
+
+OPTIONS
+	-h	Print this help and exit.
+
+	-o=ORCHESTRATOR
+		Select a different orchestrator.
+		Supported values:
+		 * swarm	(default)
+		 * kubernetes
+		 * openshift
+
+	-v	Verbose output.
+
+ERRORS
+	EX_USAGE
+		Invalid or missing arguments or options.
+
+	EX_NOPERM
+		Not enough permissions.
+";
+
+EX_OK=0;
+EX_USAGE=64;
+
+orchestrator='swarm';
+v='';
+while getopts 'ho:v' opt; do
+	case ${opt} in
+	h)	echo "${help}";
+		exit ${EX_OK};
+		;;
+	o)	orchestrator="${OPTARG}";
+		;;
+	v)	v='-v';
+		;;
+	?)	>&2 echo "${usage}";
+		exit ${EX_USAGE};
+		;;
+	esac;
+done;
+shift $((${OPTIND} - 1));
+
+if [ $# -ne 1 ]; then
+	>&2 echo "${usage}";
+	exit ${EX_USAGE};
+fi;
+s="$1";
+
+case "${orchestrator}" in
+"kubernetes")
+	alx_kube_deploy "${v}" "${s}";
+	;;
+"openshift")
+	alx_oc_deploy "${v}" "${s}";
+	;;
+"swarm")
+	alx_swarm_deploy "${v}" "${s}";
+	;;
+esac;
+
+exit ${EX_OK};

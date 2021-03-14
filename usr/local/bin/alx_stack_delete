@@ -1,0 +1,72 @@
+#!/bin/bash
+set -Eeuo pipefail;
+########################################################################
+#	Copyright (C) 2020-2021   Alejandro Colomar Andres
+#	SPDX-License-Identifier:  GPL-2.0-only
+########################################################################
+
+synopsis="${BASH_SOURCE[0]} [OPTION]... STACKNAME";
+
+usage="\
+Usage:  ${synopsis}
+Try '${BASH_SOURCE[0]} -h' for more information.";
+
+help="\
+SYNOPSIS
+	${synopsis}
+
+DESCRIPTION
+	Delete stack with name STACKNAME using an orchestrator.
+
+OPTIONS
+	-h	Print this help and exit.
+
+	-o=ORCHESTRATOR
+		Select a different orchestrator.
+		Supported values:
+		 * swarm	(default)
+		 * kubernetes
+		 * openshift
+
+ERRORS
+	EX_USAGE
+		Invalid or missing arguments or options.
+";
+
+EX_OK=0;
+EX_USAGE=64;
+
+orchestrator="swarm";
+while getopts 'ho:' opt; do
+	case ${opt} in
+	h)	echo "${help}";
+		exit ${EX_OK};
+		;;
+	o)	orchestrator="${OPTARG}";
+		;;
+	?)	>&2 echo "${usage}";
+		exit ${EX_USAGE};
+		;;
+	esac;
+done;
+shift $((${OPTIND} - 1));
+
+if [ $# -ne 1 ]; then
+	>&2 echo "${usage}";
+	exit ${EX_USAGE};
+fi;
+s="$1";
+
+case "${orchestrator}" in
+"kubernetes")
+	alx_kube_delete "${s}";
+	;;
+"openshift")
+	alx_oc_delete "${s}";
+	;;
+"swarm")
+	alx_swarm_delete "${s}";
+	;;
+esac;
+
+exit ${EX_OK};

@@ -1,0 +1,57 @@
+#!/bin/bash
+set -Eeuo pipefail;
+########################################################################
+#	Copyright (C) 2020        Alejandro Colomar Andres
+#	SPDX-License-Identifier:  GPL-2.0-only
+########################################################################
+
+synopsis="${BASH_SOURCE[0]} [OPTION]... NAMESPACE";
+
+usage="\
+Usage:  ${synopsis}
+Try '${BASH_SOURCE[0]} -h' for more information.";
+
+help="\
+SYNOPSIS
+	${synopsis}
+
+DESCRIPTION
+	Delete kubernetes stack NAMESPACE,
+
+OPTIONS
+	-h	Print this help and exit.
+
+	-k=KUBECTL
+		Use a different kubectl (default is 'kubectl').
+
+ERRORS
+	EX_USAGE
+		Invalid or missing arguments or options.
+";
+
+EX_OK=0;
+EX_USAGE=64;
+
+while getopts 'hk:' opt; do
+	case ${opt} in
+	h)	echo "${help}";
+		exit ${EX_OK};
+		;;
+	k)	k="${OPTARG}";
+		;;
+	?)	>&2 echo "${usage}";
+		exit ${EX_USAGE};
+		;;
+	esac;
+done;
+shift $((${OPTIND} - 1));
+
+if [ $# -ne 1 ]; then
+	>&2 echo "${usage}";
+	exit ${EX_USAGE};
+fi;
+n="$1";
+
+"${k:-kubectl}" delete namespace "${n}";
+
+exit ${EX_OK};
