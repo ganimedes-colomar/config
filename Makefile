@@ -8,6 +8,10 @@ bash:
 		install -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
 	done;
 
+.PHONY: docker
+docker:
+	usermod -aG docker $(SUDO_USER);
+
 .PHONY: git
 git:
 	cd home/user/; \
