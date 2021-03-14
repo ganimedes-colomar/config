@@ -29,7 +29,7 @@ git:
 
 .PHONY: groff
 groff:
-	find etc/groff* -type f \
+	find etc/groff/ -type f \
 	|while read -r f; do \
 		install -DT "$$f" "$(DESTDIR)/$$f"; \
 	done;
