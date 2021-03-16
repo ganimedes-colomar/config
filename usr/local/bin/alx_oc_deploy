@@ -66,13 +66,13 @@ p="$1";
 	&&exit ${EX_NOINPUT};
 
 oc new-project "${p}";
-alx_oc_create_configmaps	${v} -k 'oc';
-alx_oc_create_secrets		${v} -k 'oc';
+alx_oc_create_configmaps	${v} ||:;
+alx_oc_create_secrets		${v} ||:;
 
 find -L "etc/docker/openshift/" -type f \
 |sort -V \
 |while read -r f; do
-	oc apply -f "${f}" -n "${n}";
+	oc apply -f "${f}" -n "${p}";
 done;
 
 exit ${EX_OK};

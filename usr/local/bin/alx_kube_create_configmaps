@@ -69,7 +69,7 @@ if [ $# -ne 0 ]; then
 	exit ${EX_USAGE};
 fi;
 
-alx_containers_cp_configs "${v}";
+alx_containers_cp_configs ${v};
 
 project="$(find run/configs/* -maxdepth 0 | xargs basename)";
 
@@ -80,9 +80,9 @@ find -L "/run/configs/${project}/" -type f \
 	|tr '/._' '[-*]' \
 	|sed "s/$/-${project}-cm/" \
 	|xargs -I 'cm' \
-	 "${k:-kubectl}" create configmap 'cm' --from-file "$f" "${n:+-n}" "$n";
+	 "${k:-kubectl}" create configmap 'cm' --from-file "${f}" ${n:+-n} ${n:-};
 done;
 
-alx_containers_rm_configs "${v}";
+alx_containers_rm_configs ${v};
 
 exit ${EX_OK};

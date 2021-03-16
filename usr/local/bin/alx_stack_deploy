@@ -73,13 +73,13 @@ s="$1";
 
 case "${orchestrator}" in
 "kubernetes")
-	alx_kube_deploy "${v}" "${s}";
+	alx_kube_deploy ${v} "${s}";
 	;;
 "openshift")
-	alx_oc_deploy "${v}" "${s}";
+	alx_oc_deploy ${v} "${s}";
 	;;
 "swarm")
-	alx_swarm_deploy "${v}" "${s}";
+	alx_swarm_deploy ${v} "${s}";
 	;;
 esac;
 

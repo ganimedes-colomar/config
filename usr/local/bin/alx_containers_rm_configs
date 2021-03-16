@@ -72,7 +72,7 @@ fi;
 project="$(find run/configs/* -maxdepth 0 | xargs basename)";
 
 find -L "/run/configs/${project}/" -type f \
-|xargs shred -f "${v}" --remove=wipe;
-rm -rf "${v}" "/run/configs/${project}/";
+|xargs shred -f ${v} --remove=wipe;
+rm -rf ${v} "/run/configs/${project}/";
 
 exit ${EX_OK};

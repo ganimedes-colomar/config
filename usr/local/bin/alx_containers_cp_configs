@@ -69,5 +69,7 @@ if [ $(id -u) -ne 0 ]; then
 	exit ${EX_NOPERM};
 fi;
 
-mkdir -p "$v" /run/configs/;
-cp --remove-destination -Lr "$v" -t /run/configs/ run/configs/*;
+mkdir -p ${v} /run/configs/;
+cp --remove-destination -Lr ${v} -t /run/configs/ run/configs/*;
+
+exit ${EX_OK};
