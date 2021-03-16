@@ -65,12 +65,12 @@ s="$1";
 ! [ -d etc/docker/swarm/ ] \
 	&&exit ${EX_NOINPUT};
 
-alx_containers_cp_configs "${v}" ||:;
-alx_containers_cp_secrets "${v}" ||:;
+alx_containers_cp_configs ${v} ||:;
+alx_containers_cp_secrets ${v} ||:;
 
 docker stack deploy -c "etc/docker/swarm/compose.yaml" "${s}";
 
-alx_containers_rm_secrets "${v}" ||:;
-alx_containers_rm_configs "${v}" ||:;
+alx_containers_rm_secrets ${v} ||:;
+alx_containers_rm_configs ${v} ||:;
 
 exit ${EX_OK};
