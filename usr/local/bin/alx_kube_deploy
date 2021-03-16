@@ -71,8 +71,8 @@ n="$1";
 	&&exit ${EX_NOINPUT};
 
 "${k:-kubectl}" create namespace "${n}";
-alx_kube_create_configmaps	${v} -n "${n}" ${k:+-k} ${k};
-alx_kube_create_secrets		${v} -n "${n}" ${k:+-k} ${k};
+alx_kube_create_configmaps	${v} -n "${n}" ${k:+-k} ${k} ||:;
+alx_kube_create_secrets		${v} -n "${n}" ${k:+-k} ${k} ||:;
 
 find -L "etc/docker/kubernetes/" -type f \
 |sort -V \
