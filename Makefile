@@ -18,7 +18,7 @@ bash:
 	done;
 
 .PHONY: docker
-docker: | containers
+docker:
 	usermod -aG docker $(SUDO_USER);
 
 .PHONY: git
