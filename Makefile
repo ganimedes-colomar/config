@@ -16,8 +16,19 @@ bash:
 	done;
 
 .PHONY: docker
-docker:
+docker: | containers
 	usermod -aG docker $(SUDO_USER);
+	find usr/local/bin/alx_swarm_* -type f \
+	|while read -r f; do \
+		install -DT "$$f" "$(DESTDIR)/$$f"; \
+	done;
+
+.PHONY: containers
+containers:
+	find usr/local/bin/alx_{containers,stack}_* -type f \
+	|while read -r f; do \
+		install -DT "$$f" "$(DESTDIR)/$$f"; \
+	done;
 
 .PHONY: git
 git:
@@ -37,6 +48,20 @@ groff:
 .PHONY: hosts
 hosts:
 	find etc/hosts -type f \
+	|while read -r f; do \
+		install -DT "$$f" "$(DESTDIR)/$$f"; \
+	done;
+
+.PHONY: kubernetes
+kubernetes: | containers
+	find usr/local/bin/alx_kube_* -type f \
+	|while read -r f; do \
+		install -DT "$$f" "$(DESTDIR)/$$f"; \
+	done;
+
+.PHONY: oc
+oc: | containers kubernetes
+	find usr/local/bin/alx_oc_* -type f \
 	|while read -r f; do \
 		install -DT "$$f" "$(DESTDIR)/$$f"; \
 	done;
