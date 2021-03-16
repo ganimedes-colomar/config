@@ -1,3 +1,5 @@
+SHELL=/bin/bash
+
 DESTDIR?=
 
 .PHONY: apt
