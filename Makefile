@@ -1,19 +1,27 @@
 SHELL=/bin/bash
 
-DESTDIR	=
+DESTDIR		=
+
+HOMEDIR		= $(CURDIR)/home/user
+sysconfdir	= /etc
+SYSCONFDIR	= $(CURDIR)/etc
+
 
 .PHONY: apt
 apt:
-	find etc/apt/ -type f \
+	@cd $(SYSCONFDIR) && \
+	find apt/ -type f \
 	|while read -r f; do \
-		install -DT "$$f" "$(DESTDIR)/$$f"; \
+		echo "	INSTALL	$(DESTDIR)$(sysconfdir)/$$f"; \
+		install -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
 
 .PHONY: bash
 bash:
-	cd home/user/; \
+	@cd $(HOMEDIR) && \
 	find .bash* -type f \
 	|while read -r f; do \
+		echo "	INSTALL	$(DESTDIR)$(HOME)/$$f"; \
 		install -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
 	done;
 
@@ -23,44 +31,54 @@ docker:
 
 .PHONY: git
 git:
-	cd home/user/; \
+	@cd $(HOMEDIR) && \
 	find .git* -type f \
 	|while read -r f; do \
+		echo "	INSTALL	$(DESTDIR)$(HOME)/$$f"; \
 		install -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
 	done;
 
 .PHONY: groff
 groff:
-	find etc/groff/ -type f \
+	@cd $(SYSCONFDIR) && \
+	find groff/ -type f \
 	|while read -r f; do \
-		install -DT "$$f" "$(DESTDIR)/$$f"; \
+		echo "	INSTALL	$(DESTDIR)$(sysconfdir)/$$f"; \
+		install -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
 
 .PHONY: hosts
 hosts:
-	find etc/hosts -type f \
+	@cd $(SYSCONFDIR) && \
+	find hosts -type f \
 	|while read -r f; do \
-		install -DT "$$f" "$(DESTDIR)/$$f"; \
+		echo "	INSTALL	$(DESTDIR)$(sysconfdir)/$$f"; \
+		install -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
 
 .PHONY: sshd
 sshd:
-	find etc/ssh/sshd* -type f \
+	@cd $(SYSCONFDIR) && \
+	find ssh/sshd* -type f \
 	|while read -r f; do \
-		install -DT "$$f" "$(DESTDIR)/$$f"; \
+		echo "	INSTALL	$(DESTDIR)$(sysconfdir)/$$f"; \
+		install -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
 
 .PHONY: sudo
 sudo:
-	find etc/sudo* -type f \
+	@cd $(SYSCONFDIR) && \
+	find sudo* -type f \
 	|while read -r f; do \
-		install -DT "$$f" "$(DESTDIR)/$$f"; \
+		echo "	INSTALL	$(DESTDIR)$(sysconfdir)/$$f"; \
+		install -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
 
 .PHONY: vim
 vim:
-	cd home/user/; \
+	@cd $(HOMEDIR) && \
 	find .vim* -type f \
 	|while read -r f; do \
+		echo "	INSTALL	$(DESTDIR)$(HOME)/$$f"; \
 		install -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
 	done;
