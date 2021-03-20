@@ -6,10 +6,10 @@
 "source	/usr/share/vim/vim*/defaults.vim
 
 " Show line numbers
-set	nu
+set	number
 
 " Show margin
-set	cc=81
+set	colorcolumn=81
 
 " Enables syntax highlighting
 syntax	on
