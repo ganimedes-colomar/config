@@ -22,7 +22,8 @@ set		indentexpr=
 filetype	indent off
 filetype	plugin indent off
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	End of file							"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" YAML only works with spaces :(
+au filetype yaml	setlocal expandtab
+au filetype yaml	setlocal shiftwidth=8
+au filetype yaml	setlocal softtabstop=8
+au filetype yaml	setlocal tabstop=8
