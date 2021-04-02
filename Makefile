@@ -56,6 +56,15 @@ hosts:
 		install -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
 
+.PHONY: ssh
+ssh:
+	@cd $(HOMEDIR) && \
+	find .ssh* -type f \
+	|while read -r f; do \
+		echo "	INSTALL	$(DESTDIR)$(HOME)/$$f"; \
+		install -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
+	done;
+
 .PHONY: sshd
 sshd:
 	@cd $(SYSCONFDIR) && \
