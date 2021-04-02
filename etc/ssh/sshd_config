@@ -4,7 +4,7 @@ AllowAgentForwarding		no
 #AllowGroups
 AllowStreamLocalForwarding	no
 
-AllowTcpForwarding		no
+AllowTcpForwarding		yes
 AllowUsers			ubuntu
 AuthenticationMethods		publickey
 #AuthorizedKeysCommand
@@ -27,7 +27,7 @@ Compression			yes
 DebianBanner			no
 #DenyGroups
 #DenyUsers
-DisableForwarding		yes
+DisableForwarding		no
 
 ExposeAuthInfo			no
 FingerprintHash			sha256
@@ -72,7 +72,7 @@ PasswordAuthentication		no
 PermitEmptyPasswords		no
 
 PermitListen			none
-PermitOpen			none
+PermitOpen			manager0.alejandro-colomar.es:22 manager1.alejandro-colomar.es:22 manager2.alejandro-colomar.es:22 worker0.alejandro-colomar.es:22 worker1.alejandro-colomar.es:22 worker2.alejandro-coloomar.es:22
 PermitRootLogin			no
 PermitTTY			yes
 PermitTunnel			no
