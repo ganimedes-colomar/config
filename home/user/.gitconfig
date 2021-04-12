@@ -4,6 +4,9 @@
 	tree = lg --all
 [color]
 	ui = auto
+[color "diff"]
+	old = brightred
+	new = brightgreen
 [core]
 	editor = vim
 [init]
