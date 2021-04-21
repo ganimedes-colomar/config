@@ -6,6 +6,14 @@ HOMEDIR		= $(CURDIR)/home/user
 sysconfdir	= /etc
 SYSCONFDIR	= $(CURDIR)/etc
 
+remotes	= \
+	builder \
+	manager0 \
+	manager1 \
+	manager2 \
+	worker0 \
+	worker1 \
+	worker2
 
 .PHONY: apt
 apt:
@@ -28,6 +36,13 @@ bash:
 .PHONY: docker
 docker:
 	usermod -aG docker $(SUDO_USER);
+
+.PHONY: docker-contexts
+docker-contexts:
+	for r in $(remotes); do \
+		docker context create "$$r" \
+			--docker "host=ssh://$${r}.alejandro-colomar.es" ||:; \
+	done;
 
 .PHONY: git
 git:
