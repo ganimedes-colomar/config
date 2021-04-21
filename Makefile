@@ -1,5 +1,5 @@
 #!/usr/bin/make -f
-SHELL=/bin/bash
+SHELL=/bin/bash -Eeuo pipefail
 
 DESTDIR		=
 
