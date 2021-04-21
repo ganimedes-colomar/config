@@ -46,7 +46,7 @@ docker-contexts:
 	for c in $(remotes); do \
 		r="ssh://$${c}.alejandro-colomar.es"; \
 		echo "	DOCKER context	$$c $$r"; \
-		docker context create "$$c" --docker "host=$$r" ||:; \
+		docker context create "$$c" --docker "host=$$r" >/dev/null ||:; \
 	done;
 
 .PHONY: git
