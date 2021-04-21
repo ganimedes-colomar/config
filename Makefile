@@ -42,9 +42,10 @@ docker:
 .PHONY: docker-contexts
 .SILENT: docker-contexts
 docker-contexts:
-	for r in $(remotes); do \
-		docker context create "$$r" \
-			--docker "host=ssh://$${r}.alejandro-colomar.es" ||:; \
+	for c in $(remotes); do \
+		r="ssh://$${c}.alejandro-colomar.es"; \
+		echo "	DOCKER context	$$c $$r"; \
+		docker context create "$$c" --docker "host=$$r" ||:; \
 	done;
 
 .PHONY: git
