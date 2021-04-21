@@ -100,6 +100,7 @@ sshd:
 		echo "	INSTALL	$(DESTDIR)$(sysconfdir)/$$f"; \
 		install -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
+	@echo '	SERVICE	sshd restart';
 	service sshd restart;
 
 .PHONY: sudo
