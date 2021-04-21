@@ -1,3 +1,4 @@
+#!/usr/bin/make -f
 SHELL=/bin/bash
 
 DESTDIR		=
