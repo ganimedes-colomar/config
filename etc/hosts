@@ -1,8 +1,8 @@
 127.0.0.1	localhost
 
-10.168.10.50	gui0.alejandro-colomar.es	gui0
-10.168.10.51	gui1.alejandro-colomar.es	gui1
-10.168.10.52	gui2.alejandro-colomar.es	gui2
+10.168.10.50	builder0.alejandro-colomar.es	builder0
+10.168.10.51	builder1.alejandro-colomar.es	builder1
+10.168.10.52	builder2.alejandro-colomar.es	builder2
 
 10.168.10.100	worker0.alejandro-colomar.es	worker0
 10.168.10.101	worker1.alejandro-colomar.es	worker1

@@ -8,7 +8,9 @@ sysconfdir	= /etc
 SYSCONFDIR	= $(CURDIR)/etc
 
 remotes	= \
-	builder \
+	builder0 \
+	builder1 \
+	builder2 \
 	manager0 \
 	manager1 \
 	manager2 \
