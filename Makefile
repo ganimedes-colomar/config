@@ -16,8 +16,9 @@ remotes	= \
 	worker2
 
 .PHONY: apt
+.SILENT: apt
 apt:
-	@cd $(SYSCONFDIR) && \
+	cd $(SYSCONFDIR) && \
 	find apt/ -type f \
 	|while read -r f; do \
 		echo "	INSTALL	$(DESTDIR)$(sysconfdir)/$$f"; \
@@ -25,8 +26,9 @@ apt:
 	done;
 
 .PHONY: bash
+.SILENT: bash
 bash:
-	@cd $(HOMEDIR) && \
+	cd $(HOMEDIR) && \
 	find .bash* -type f \
 	|while read -r f; do \
 		echo "	INSTALL	$(DESTDIR)$(HOME)/$$f"; \
@@ -38,6 +40,7 @@ docker:
 	usermod -aG docker $(SUDO_USER);
 
 .PHONY: docker-contexts
+.SILENT: docker-contexts
 docker-contexts:
 	for r in $(remotes); do \
 		docker context create "$$r" \
@@ -45,8 +48,9 @@ docker-contexts:
 	done;
 
 .PHONY: git
+.SILENT: git
 git:
-	@cd $(HOMEDIR) && \
+	cd $(HOMEDIR) && \
 	find .git* -type f \
 	|while read -r f; do \
 		echo "	INSTALL	$(DESTDIR)$(HOME)/$$f"; \
@@ -54,8 +58,9 @@ git:
 	done;
 
 .PHONY: groff
+.SILENT: groff
 groff:
-	@cd $(SYSCONFDIR) && \
+	cd $(SYSCONFDIR) && \
 	find groff/ -type f \
 	|while read -r f; do \
 		echo "	INSTALL	$(DESTDIR)$(sysconfdir)/$$f"; \
@@ -63,8 +68,9 @@ groff:
 	done;
 
 .PHONY: hosts
+.SILENT: hosts
 hosts:
-	@cd $(SYSCONFDIR) && \
+	cd $(SYSCONFDIR) && \
 	find hosts -type f \
 	|while read -r f; do \
 		echo "	INSTALL	$(DESTDIR)$(sysconfdir)/$$f"; \
@@ -72,8 +78,9 @@ hosts:
 	done;
 
 .PHONY: ssh
+.SILENT: ssh
 ssh:
-	@cd $(HOMEDIR) && \
+	cd $(HOMEDIR) && \
 	find .ssh* -type f \
 	|while read -r f; do \
 		echo "	INSTALL	$(DESTDIR)$(HOME)/$$f"; \
@@ -81,8 +88,9 @@ ssh:
 	done;
 
 .PHONY: sshd
+.SILENT: sshd
 sshd:
-	@cd $(SYSCONFDIR) && \
+	cd $(SYSCONFDIR) && \
 	find ssh/sshd* -type f \
 	|while read -r f; do \
 		echo "	INSTALL	$(DESTDIR)$(sysconfdir)/$$f"; \
@@ -90,8 +98,9 @@ sshd:
 	done;
 
 .PHONY: sudo
+.SILENT: sudo
 sudo:
-	@cd $(SYSCONFDIR) && \
+	cd $(SYSCONFDIR) && \
 	find sudo* -type f \
 	|while read -r f; do \
 		echo "	INSTALL	$(DESTDIR)$(sysconfdir)/$$f"; \
@@ -99,8 +108,9 @@ sudo:
 	done;
 
 .PHONY: vim
+.SILENT: vim
 vim:
-	@cd $(HOMEDIR) && \
+	cd $(HOMEDIR) && \
 	find .vim* -type f \
 	|while read -r f; do \
 		echo "	INSTALL	$(DESTDIR)$(HOME)/$$f"; \
