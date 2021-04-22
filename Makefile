@@ -82,10 +82,11 @@ hosts:
 .SILENT: ssh
 ssh:
 	cd $(HOMEDIR) && \
-	find .ssh* -type f \
-	|while read -r f; do \
-		echo "	INSTALL	$(DESTDIR)$(HOME)/$$f"; \
-		install -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
+	find .ssh/ -type f \
+	|while read f; do \
+		sed '/# alejandro-colomar.es\s*BEGIN/,/# alejandro-colomar.es\s*END/d' \
+			-i "$(DESTDIR)$(HOME)/$$f" ||:; \
+		cat "$(HOMEDIR)/$$f" >> "$(DESTDIR)$(HOME)/$$f"; \
 	done;
 
 .PHONY: sshd
