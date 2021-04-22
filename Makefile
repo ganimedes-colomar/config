@@ -74,9 +74,13 @@ groff:
 .PHONY: hosts
 .SILENT: hosts
 hosts:
-	sed -i '/# alejandro-colomar.es\s*BEGIN/,/# alejandro-colomar.es\s*END/d' \
-		$(DESTDIR)$(sysconfdir)/hosts;
-	cat $(SYSCONFDIR)/hosts >> $(DESTDIR)$(sysconfdir)/hosts;
+	cd $(SYSCONFDIR) && \
+	find hosts -type f \
+	|while read f; do \
+		sed '/# alejandro-colomar.es\s*BEGIN/,/# alejandro-colomar.es\s*END/d' \
+			-i "$(DESTDIR)$(sysconfdir)/$$f" ||:; \
+		cat "$(SYSCONFDIR)/$$f" >> "$(DESTDIR)$(sysconfdir)/$$f"; \
+	done;
 
 .PHONY: ssh
 .SILENT: ssh
