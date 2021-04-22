@@ -7,6 +7,10 @@ HOMEDIR		= $(CURDIR)/home/user
 sysconfdir	= /etc
 SYSCONFDIR	= $(CURDIR)/etc
 
+INSTALL		= install
+INSTALL_DATA	= $(INSTALL) -m 644
+INSTALL_DIR	= $(INSTALL) -m 755 -d
+
 remotes	= \
 	builder0 \
 	builder1 \
@@ -25,7 +29,7 @@ apt:
 	find apt/ -type f \
 	|while read -r f; do \
 		echo "	INSTALL	$(DESTDIR)$(sysconfdir)/$$f"; \
-		install -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
+		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
 
 .PHONY: bash
@@ -35,7 +39,7 @@ bash:
 	find .bash* -type f \
 	|while read -r f; do \
 		echo "	INSTALL	$(DESTDIR)$(HOME)/$$f"; \
-		install -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
+		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
 	done;
 
 .PHONY: docker
@@ -58,7 +62,7 @@ git:
 	find .git* -type f \
 	|while read -r f; do \
 		echo "	INSTALL	$(DESTDIR)$(HOME)/$$f"; \
-		install -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
+		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
 	done;
 
 .PHONY: groff
@@ -68,7 +72,7 @@ groff:
 	find groff/ -type f \
 	|while read -r f; do \
 		echo "	INSTALL	$(DESTDIR)$(sysconfdir)/$$f"; \
-		install -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
+		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
 
 .PHONY: hosts
@@ -100,7 +104,7 @@ sshd:
 	find ssh/sshd* -type f \
 	|while read -r f; do \
 		echo "	INSTALL	$(DESTDIR)$(sysconfdir)/$$f"; \
-		install -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
+		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
 	@echo '	SERVICE	sshd restart';
 	service sshd restart;
@@ -112,7 +116,7 @@ sudo:
 	find sudo* -type f \
 	|while read -r f; do \
 		echo "	INSTALL	$(DESTDIR)$(sysconfdir)/$$f"; \
-		install -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
+		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
 
 .PHONY: vim
@@ -122,5 +126,5 @@ vim:
 	find .vim* -type f \
 	|while read -r f; do \
 		echo "	INSTALL	$(DESTDIR)$(HOME)/$$f"; \
-		install -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
+		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
 	done;
