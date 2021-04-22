@@ -74,12 +74,9 @@ groff:
 .PHONY: hosts
 .SILENT: hosts
 hosts:
-	cd $(SYSCONFDIR) && \
-	find hosts -type f \
-	|while read -r f; do \
-		echo "	INSTALL	$(DESTDIR)$(sysconfdir)/$$f"; \
-		install -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
-	done;
+	sed -i '/# alejandro-colomar.es\s*BEGIN/,/# alejandro-colomar.es\s*END/d' \
+		$(DESTDIR)$(sysconfdir)/hosts;
+	cat $(SYSCONFDIR)/hosts >> $(DESTDIR)$(sysconfdir)/hosts;
 
 .PHONY: ssh
 .SILENT: ssh
