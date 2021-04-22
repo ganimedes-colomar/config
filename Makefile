@@ -27,7 +27,7 @@ remotes	= \
 apt:
 	cd $(SYSCONFDIR) && \
 	find apt/ -type f \
-	|while read -r f; do \
+	|while read f; do \
 		echo "	INSTALL	$(DESTDIR)$(sysconfdir)/$$f"; \
 		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
@@ -37,7 +37,7 @@ apt:
 bash:
 	cd $(HOMEDIR) && \
 	find .bash* -type f \
-	|while read -r f; do \
+	|while read f; do \
 		echo "	INSTALL	$(DESTDIR)$(HOME)/$$f"; \
 		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
 	done;
@@ -60,7 +60,7 @@ docker-contexts:
 git:
 	cd $(HOMEDIR) && \
 	find .git* -type f \
-	|while read -r f; do \
+	|while read f; do \
 		echo "	INSTALL	$(DESTDIR)$(HOME)/$$f"; \
 		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
 	done;
@@ -70,7 +70,7 @@ git:
 groff:
 	cd $(SYSCONFDIR) && \
 	find groff/ -type f \
-	|while read -r f; do \
+	|while read f; do \
 		echo "	INSTALL	$(DESTDIR)$(sysconfdir)/$$f"; \
 		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
@@ -102,7 +102,7 @@ ssh:
 sshd:
 	cd $(SYSCONFDIR) && \
 	find ssh/sshd* -type f \
-	|while read -r f; do \
+	|while read f; do \
 		echo "	INSTALL	$(DESTDIR)$(sysconfdir)/$$f"; \
 		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
@@ -114,7 +114,7 @@ sshd:
 sudo:
 	cd $(SYSCONFDIR) && \
 	find sudo* -type f \
-	|while read -r f; do \
+	|while read f; do \
 		echo "	INSTALL	$(DESTDIR)$(sysconfdir)/$$f"; \
 		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
@@ -124,7 +124,7 @@ sudo:
 vim:
 	cd $(HOMEDIR) && \
 	find .vim* -type f \
-	|while read -r f; do \
+	|while read f; do \
 		echo "	INSTALL	$(DESTDIR)$(HOME)/$$f"; \
 		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
 	done;
