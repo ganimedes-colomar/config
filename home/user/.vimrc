@@ -5,9 +5,6 @@
 " Load VIM defaults
 "source	/usr/share/vim/vim*/defaults.vim
 
-" Show line numbers
-set	number
-
 " Show margin
 set	colorcolumn=81
 
