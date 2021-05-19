@@ -8,6 +8,9 @@
 " Show margin
 set	colorcolumn=81
 
+" Don't wrap lines visually
+set	nowrap
+
 " Enables syntax highlighting
 syntax	on
 
