@@ -5,7 +5,7 @@ AllowAgentForwarding		no
 AllowStreamLocalForwarding	no
 
 AllowTcpForwarding		yes
-AllowUsers			ubuntu
+AllowUsers			alx ubuntu
 AuthenticationMethods		publickey
 #AuthorizedKeysCommand
 #AuthorizedKeysCommandUser
