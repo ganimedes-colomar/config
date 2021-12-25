@@ -101,7 +101,7 @@ sudo:
 	cd $(SYSCONFDIR) && \
 	find sudo* -type f \
 	|while read f; do \
-		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
+		$(INSTALL) -m 440 -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
 
 .PHONY: vim
