@@ -39,6 +39,14 @@ bash:
 		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
 	done;
 
+.PHONY: doas
+doas:
+	cd $(SYSCONFDIR) && \
+	find doas* -type f \
+	|while read f; do \
+		$(INSTALL) -m 440 -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
+	done;
+
 .PHONY: docker
 docker:
 	usermod -aG docker $(SUDO_USER);
