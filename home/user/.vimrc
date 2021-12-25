@@ -6,6 +6,7 @@
 
 set colorcolumn=81
 set nowrap
+set hlsearch
 
 syntax on
 
