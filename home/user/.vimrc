@@ -7,6 +7,7 @@
 set colorcolumn=81
 set nowrap
 set hlsearch
+set scrolloff=4
 
 syntax on
 
