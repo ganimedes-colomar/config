@@ -20,3 +20,8 @@ au filetype yaml setlocal expandtab
 au filetype yaml setlocal shiftwidth=8
 au filetype yaml setlocal softtabstop=8
 au filetype yaml setlocal tabstop=8
+
+au bufnewfile,bufread ~/src/nginx/* setlocal expandtab
+au bufnewfile,bufread ~/src/nginx/* setlocal shiftwidth=4
+au bufnewfile,bufread ~/src/nginx/* setlocal softtabstop=4
+au bufnewfile,bufread ~/src/nginx/* setlocal tabstop=40
