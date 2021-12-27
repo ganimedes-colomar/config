@@ -23,6 +23,11 @@ au filetype yaml setlocal shiftwidth=8
 au filetype yaml setlocal softtabstop=8
 au filetype yaml setlocal tabstop=40
 
+au bufnewfile,bufread ~/src/linux/man-pages/man?/* setlocal expandtab
+au bufnewfile,bufread ~/src/linux/man-pages/man?/* setlocal shiftwidth=4
+au bufnewfile,bufread ~/src/linux/man-pages/man?/* setlocal softtabstop=4
+au bufnewfile,bufread ~/src/linux/man-pages/man?/* setlocal tabstop=40
+
 au bufnewfile,bufread ~/src/nginx/* setlocal expandtab
 au bufnewfile,bufread ~/src/nginx/* setlocal shiftwidth=4
 au bufnewfile,bufread ~/src/nginx/* setlocal softtabstop=4
