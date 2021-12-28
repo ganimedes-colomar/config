@@ -16,7 +16,7 @@ AuthorizedKeysFile		%h/.ssh/authorized_keys
 #AuthorizedPrincipalsFile
 Banner				none
 
-CASignatureAlgorithms		rsa-sha2-512,rsa-sha2-256
+CASignatureAlgorithms		rsa-sha2-512
 ChallengeResponseAuthentication	no
 #ChrootDirectory
 Ciphers				chacha20-poly1305@openssh.com
@@ -37,14 +37,14 @@ GSSAPIAuthentication		no
 
 GSSAPICleanupCredentials	yes
 GSSAPIStrictAcceptorCheck	yes
-HostbasedAcceptedKeyTypes	rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,rsa-sha2-512,rsa-sha2-256
+HostbasedAcceptedKeyTypes	rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-512
 HostbasedAuthentication		no
 HostbasedUsesNameFromPacketOnly	no
 
 #HostCertificate
 HostKey				/etc/ssh/ssh_host_rsa_key
 #HostKeyAgent
-#HostKeyAlgorithms		rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,rsa-sha2-512,rsa-sha2-256
+#HostKeyAlgorithms		rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-512
 IgnoreRhosts			yes
 
 IgnoreUserKnownHosts		no
@@ -62,7 +62,7 @@ ListenAddress			0.0.0.0:22
 LoginGraceTime			60
 LogLevel			DEBUG3
 #LogVerbose
-MACs				hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com
+MACs				hmac-sha2-512-etm@openssh.com
 #Match
 
 MaxAuthTries			3
@@ -84,7 +84,7 @@ PidFile				/var/run/sshd.pid
 PrintLastLog			no
 
 PrintMotd			yes
-PubkeyAcceptedKeyTypes		rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,rsa-sha2-512,rsa-sha2-256
+PubkeyAcceptedKeyTypes		rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-512
 PubkeyAuthOptions		touch-required
 PubkeyAuthentication		yes
 RekeyLimit			default 3600
