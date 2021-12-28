@@ -5,7 +5,7 @@ AllowAgentForwarding		no
 AllowStreamLocalForwarding	no
 
 AllowTcpForwarding		yes
-AllowUsers			alx ubuntu user
+AllowUsers			alx user
 AuthenticationMethods		publickey
 #AuthorizedKeysCommand
 #AuthorizedKeysCommandUser
@@ -72,7 +72,7 @@ PasswordAuthentication		no
 PermitEmptyPasswords		no
 
 PermitListen			none
-PermitOpen			builder0.alejandro-colomar.es:22 builder1.alejandro-colomar.es:22 builder2.alejandro-colomar.es:22 manager0.alejandro-colomar.es:22 manager1.alejandro-colomar.es:22 manager2.alejandro-colomar.es:22 worker0.alejandro-colomar.es:22 worker1.alejandro-colomar.es:22 worker2.alejandro-colomar.es:22 exfo.alejandro-colomar.es:22 sqli.alejandro-colomar.es:22
+PermitOpen			rpi.alejandro-colomar.es:22 sqli.alejandro-colomar.es:22
 PermitRootLogin			no
 PermitTTY			yes
 PermitTunnel			no
