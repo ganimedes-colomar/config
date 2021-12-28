@@ -1,16 +1,5 @@
 # alejandro-colomar.es BEGIN
-10.168.10.50	builder0.alejandro-colomar.es	builder0
-10.168.10.51	builder1.alejandro-colomar.es	builder1
-10.168.10.52	builder2.alejandro-colomar.es	builder2
+10.168.10.101	rpi.alejandro-colomar.es	rpi
 
-10.168.10.100	worker0.alejandro-colomar.es	worker0
-10.168.10.101	worker1.alejandro-colomar.es	worker1
-10.168.10.102	worker2.alejandro-colomar.es	worker2
-
-10.168.10.200	manager0.alejandro-colomar.es	manager0
-10.168.10.201	manager1.alejandro-colomar.es	manager1
-10.168.10.202	manager2.alejandro-colomar.es	manager2
-
-10.168.10.10	exfo.alejandro-colomar.es	exfo
 10.168.10.11	sqli.alejandro-colomar.es	sqli
 # alejandro-colomar.es END
