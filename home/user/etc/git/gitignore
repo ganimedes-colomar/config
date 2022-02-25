@@ -1,0 +1,6 @@
+# vim(1) tmp files
+*.swp
+*.swo
+
+# Store patches here:
+/patches/

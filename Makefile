@@ -62,7 +62,8 @@ docker-contexts:
 .PHONY: git
 git:
 	cd $(HOMEDIR) && \
-	find .git* -type f \
+	find . -type f \
+	|grep git \
 	|while read f; do \
 		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
 	done;
