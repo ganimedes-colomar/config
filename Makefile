@@ -86,16 +86,6 @@ hosts:
 		cat "$(SYSCONFDIR)/$$f" >> "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
 
-.PHONY: ssh
-ssh:
-	cd $(HOMEDIR) && \
-	find .ssh/ -type f \
-	|while read f; do \
-		sed '/# alejandro-colomar.es\s*BEGIN/,/# alejandro-colomar.es\s*END/d' \
-			-i "$(DESTDIR)$(HOME)/$$f" ||:; \
-		cat "$(HOMEDIR)/$$f" >> "$(DESTDIR)$(HOME)/$$f"; \
-	done;
-
 .PHONY: sshd
 sshd:
 	cd $(SYSCONFDIR) && \
