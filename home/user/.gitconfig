@@ -11,6 +11,8 @@
 [core]
 	editor = vim
 	excludesFile = ~/.config/git/gitignore
+[diff]
+	algorithm = histogram
 [init]
 	defaultBranch = main
 [pull]
