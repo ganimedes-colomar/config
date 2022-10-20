@@ -13,6 +13,8 @@
 	excludesFile = ~/.config/git/gitignore
 [diff]
 	algorithm = histogram
+[diff "man"]
+	xfuncname = "^\\.S[SH] .*$"
 [init]
 	defaultBranch = main
 [pull]
