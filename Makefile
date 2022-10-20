@@ -3,7 +3,7 @@ SHELL	= /bin/bash -Eeuo pipefail
 
 DESTDIR		=
 
-HOMEDIR		= $(CURDIR)/home/user
+HOMEDIR		= $(CURDIR)/home
 sysconfdir	= /etc
 SYSCONFDIR	= $(CURDIR)/etc
 
