@@ -10,7 +10,7 @@
 	new = brightgreen
 [core]
 	editor = vim
-	excludesFile = ~/etc/git/gitignore
+	excludesFile = ~/.config/git/gitignore
 [init]
 	defaultBranch = main
 [pull]
