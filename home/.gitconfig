@@ -17,6 +17,8 @@
 	xfuncname = "^\\.S[SH] .*$"
 [init]
 	defaultBranch = main
+[pager]
+	status = true
 [pull]
 	ff = only
 [sendemail]
