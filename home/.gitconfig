@@ -24,10 +24,10 @@
 [pull]
 	ff = only
 [sendemail]
-	smtpuser = alx.manpages
-	smtpserver = smtp.googlemail.com
-	smtpencryption = tls
-	smtpserverport = 587
+	smtpuser = alx
+	smtpserver = mail.kernel.org
+	smtpencryption = ssl
+	smtpserverport = 465
 	smtpPass = <passwd>
 [user]
 	name = Alejandro Colomar
