@@ -19,16 +19,16 @@ filetype indent off
 filetype plugin indent off
 
 au filetype yaml setlocal expandtab
-au filetype yaml setlocal shiftwidth=8
-au filetype yaml setlocal softtabstop=8
-au filetype yaml setlocal tabstop=43
+au filetype yaml setlocal shiftwidth=4
+au filetype yaml setlocal softtabstop=4
+au filetype yaml setlocal tabstop=5
 
 au bufnewfile,bufread ~/src/linux/man-pages/man?/* setlocal expandtab
 au bufnewfile,bufread ~/src/linux/man-pages/man?/* setlocal shiftwidth=4
 au bufnewfile,bufread ~/src/linux/man-pages/man?/* setlocal softtabstop=4
-au bufnewfile,bufread ~/src/linux/man-pages/man?/* setlocal tabstop=43
+au bufnewfile,bufread ~/src/linux/man-pages/man?/* setlocal tabstop=5
 
 au bufnewfile,bufread ~/src/nginx/* setlocal expandtab
 au bufnewfile,bufread ~/src/nginx/* setlocal shiftwidth=4
 au bufnewfile,bufread ~/src/nginx/* setlocal softtabstop=4
-au bufnewfile,bufread ~/src/nginx/* setlocal tabstop=43
+au bufnewfile,bufread ~/src/nginx/* setlocal tabstop=5
