@@ -4,7 +4,7 @@
 
 "source /usr/share/vim/vim*/defaults.vim
 
-set colorcolumn=81
+set colorcolumn=73,81
 set nowrap
 set hlsearch
 set scrolloff=4
