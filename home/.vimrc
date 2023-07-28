@@ -18,6 +18,8 @@ set indentexpr=
 filetype indent off
 filetype plugin indent off
 
+au filetype make setlocal noexpandtab
+
 au filetype yaml setlocal expandtab
 au filetype yaml setlocal shiftwidth=4
 au filetype yaml setlocal softtabstop=4
