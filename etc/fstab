@@ -1,0 +1,6 @@
+# alx BEGIN
+/dev/mapper/alx-usb-g	/home/alx/.gnupg	ext4	defaults,user=alx
+/dev/mapper/alx-usb-s	/home/alx/.ssh	ext4	defaults,user=alx
+/dev/mapper/alx-usb-p	/home/alx/.password-store	ext4	defaults,user=alx
+/dev/mapper/alx-usb-m	/home/alx/keyring/master	ext4	defaults,user=alx
+# alx END

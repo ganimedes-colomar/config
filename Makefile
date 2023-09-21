@@ -59,6 +59,16 @@ docker-contexts:
 		docker context create "$$c" --docker "host=$$r" >/dev/null ||:; \
 	done;
 
+.PHONY: fstab
+fstab:
+	cd $(SYSCONFDIR) && \
+	find fstab -type f \
+	|while read f; do \
+		sed '/# alx\s*BEGIN/,/# alx\s*END/d' \
+			-i "$(DESTDIR)$(sysconfdir)/$$f" ||:; \
+		cat "$(SYSCONFDIR)/$$f" >> "$(DESTDIR)$(sysconfdir)/$$f"; \
+	done;
+
 .PHONY: git
 git:
 	cd $(HOMEDIR) && \
