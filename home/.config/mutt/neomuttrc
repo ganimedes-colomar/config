@@ -1,11 +1,5 @@
 source pass.neomuttrc
-
-set my_name	= alex
-set from	= "alx@kernel.org"
-set real_name	= "Alejandro Colomar"
-
-set smtp_url	= "smtps://alx@mail.kernel.org:465/"
-
+source smtp.neomuttrc
 source imap.neomuttrc
 source gpg.neomuttrc
 source sidebar.neomuttrc
