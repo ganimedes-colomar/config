@@ -19,3 +19,4 @@ mailboxes 	"+[Gmail]/All Mail" $spool_file $postponed $record $trash "+[Gmail]/S
 
 source gpg.neomuttrc
 source sidebar.neomuttrc
+source thread.neomuttrc

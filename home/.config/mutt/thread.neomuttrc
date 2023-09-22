@@ -1,0 +1,2 @@
+set sort	= threads
+set sort_aux	= last-date-sent
