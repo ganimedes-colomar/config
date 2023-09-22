@@ -1,2 +1,4 @@
+set crypt_protected_headers_write = yes
+
 set pgp_self_encrypt = yes
 set pgp_default_key = A9348594CE31283A826FBDD8D57633D441E25BB5
