@@ -96,6 +96,14 @@ hosts:
 		cat "$(SYSCONFDIR)/$$f" >> "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
 
+.PHONY: mutt
+mutt:
+	cd $(HOMEDIR) && \
+	find .config/mutt -type f \
+	|while read f; do \
+		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
+	done;
+
 .PHONY: sshd
 sshd:
 	cd $(SYSCONFDIR) && \

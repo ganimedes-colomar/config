@@ -1,0 +1,21 @@
+source pass.neomuttrc
+
+set my_name	= alex
+set from	= "alx@kernel.org"
+set real_name	= "Alejandro Colomar"
+
+set smtp_url	= "smtps://alx@mail.kernel.org:465/"
+
+set folder      = "imaps://imap.gmail.com/"
+set imap_user	= "alx.manpages"
+
+set spool_file	= "+INBOX"
+set postponed	= "+[Gmail]/Drafts"
+set record	= "+[Gmail]/Sent Mail"
+set trash	= "+[Gmail]/Trash"
+
+mailboxes 	"+[Gmail]/All Mail" $spool_file $postponed $record $trash "+[Gmail]/Spam"
+#set imap_check_subscribed
+
+source gpg.neomuttrc
+source sidebar.neomuttrc
