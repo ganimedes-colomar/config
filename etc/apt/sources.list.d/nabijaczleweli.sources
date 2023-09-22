@@ -1,0 +1,6 @@
+Types: deb
+URIs: https://debian.nabijaczleweli.xyz
+Suites: sid
+Components: main patches
+Architectures: amd64
+Signed-By: /etc/apt/keyrings/nabijaczleweli.asc
