@@ -1,0 +1,20 @@
+IMAPStore gmail-remote
+Host imap.gmail.com
+Port 993
+User alx.manpages
+PassCmd "pass show email/gmail/alx.manpages/imap"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore gmail-local
+Path ~/mail/gmail/alx/
+Inbox ~/mail/gmail/alx/INBOX
+SubFolders Verbatim
+
+Channel gmail
+Far :gmail-remote:
+Near :gmail-local:
+Create Both
+Expunge Both
+Patterns *
+SyncState *
