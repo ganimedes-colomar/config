@@ -1,4 +1,0 @@
-set folder      = "imaps://imap.gmail.com/"
-set imap_user	= "alx.manpages"
-
-set imap_check_subscribed
