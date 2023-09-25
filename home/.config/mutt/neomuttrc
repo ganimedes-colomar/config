@@ -1,6 +1,7 @@
 source pass.neomuttrc
 source smtp.neomuttrc
 source imap.neomuttrc
+source mailbox.neomuttrc
 source gpg.neomuttrc
 source sidebar.neomuttrc
 source thread.neomuttrc

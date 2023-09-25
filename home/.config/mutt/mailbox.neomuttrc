@@ -1,0 +1,6 @@
+set spool_file	= "+INBOX"
+set postponed	= "+[Gmail]/Drafts"
+set record	= "+[Gmail]/Sent Mail"
+set trash	= "+[Gmail]/Trash"
+
+#mailboxes 	"+[Gmail]/All Mail" $spool_file $postponed $record $trash "+[Gmail]/Spam"
