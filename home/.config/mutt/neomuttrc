@@ -4,3 +4,4 @@ source mailbox.neomuttrc
 source gpg.neomuttrc
 source sidebar.neomuttrc
 source thread.neomuttrc
+source pager.neomuttrc
