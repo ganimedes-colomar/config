@@ -1,4 +1,4 @@
-set crypt_auto_sign = yes
+set crypt_autosign = yes
 set crypt_opportunistic_encrypt = yes
 set crypt_protected_headers_write = yes
 

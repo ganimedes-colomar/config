@@ -1,5 +1,5 @@
 set my_name	= alex
 set from	= "alx@kernel.org"
-set real_name	= "Alejandro Colomar"
+set realname	= "Alejandro Colomar"
 
 set smtp_url	= "smtps://alx@mail.kernel.org:465/"
