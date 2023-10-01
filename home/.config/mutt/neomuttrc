@@ -1,7 +1,0 @@
-source pass.neomuttrc
-source smtp.neomuttrc
-source mailbox.neomuttrc
-source gpg.neomuttrc
-source thread.neomuttrc
-source pager.neomuttrc
-source char.neomuttrc

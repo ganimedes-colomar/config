@@ -1,1 +1,7 @@
-source neomuttrc
+source pass.muttrc
+source smtp.muttrc
+source mailbox.muttrc
+source gpg.muttrc
+source thread.muttrc
+source pager.muttrc
+source char.muttrc
