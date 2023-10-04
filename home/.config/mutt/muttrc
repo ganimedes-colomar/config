@@ -5,3 +5,4 @@ source ~/.config/mutt/gpg.muttrc
 source ~/.config/mutt/thread.muttrc
 source ~/.config/mutt/pager.muttrc
 source ~/.config/mutt/char.muttrc
+source ~/.config/mutt/edit.muttrc
