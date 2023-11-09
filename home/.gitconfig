@@ -26,11 +26,7 @@
 [pull]
 	ff = only
 [sendemail]
-	smtpuser = alx
-	smtpserver = mail.kernel.org
-	smtpencryption = ssl
-	smtpserverport = 465
-	smtpPass = <passwd>
+	sendmailcmd = mutt -H -
 [user]
 	name = Alejandro Colomar
 	email = alx@kernel.org
