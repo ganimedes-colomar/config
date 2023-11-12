@@ -26,7 +26,7 @@
 [pull]
 	ff = only
 [sendemail]
-	sendmailcmd = mutt -H -
+	sendmailcmd = mutt -H - && true
 [user]
 	name = Alejandro Colomar
 	email = alx@kernel.org
