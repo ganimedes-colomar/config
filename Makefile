@@ -39,6 +39,15 @@ bash:
 		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
 	done;
 
+.PHONY: console
+console:
+	cd $(SYSCONFDIR) && \
+	find . -type f \
+	|grep console-setup \
+	|while read f; do \
+		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
+	done;
+
 .PHONY: doas
 doas:
 	cd $(SYSCONFDIR) && \
