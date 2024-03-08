@@ -1,8 +1,6 @@
-set folder      = "~/mail/gmail/alx/"
+set spoolfile	= "+Inbox"
+set postponed	= "+Drafts"
+set record	= "+Inbox"
+set trash	= "+Trash"
 
-set spoolfile	= "+INBOX"
-set postponed	= "+[Gmail]/Drafts"
-set record	= "+[Gmail]/Sent Mail"
-set trash	= "+[Gmail]/Trash"
-
-mailboxes	"+[Gmail]/All Mail" $spoolfile $postponed $record $trash "+[Gmail]/Spam" "+[Gmail]/Important" "+[Gmail]/Starred"
+mailboxes	$spoolfile $postponed $record $trash "+Junk" "+Archive" "+Sent"

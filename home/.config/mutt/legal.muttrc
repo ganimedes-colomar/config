@@ -1,0 +1,4 @@
+source ~/.config/mutt/legal.smtp.muttrc
+source ~/.config/mutt/legal.folder.muttrc
+source ~/.config/mutt/mailbox.muttrc
+source ~/.config/mutt/gpg.muttrc

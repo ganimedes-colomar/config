@@ -1,1 +1,0 @@
-set smtp_pass = "`pass show www/foss/kernel/smtp/pass`"

@@ -1,7 +1,4 @@
-source ~/.config/mutt/pass.muttrc
-source ~/.config/mutt/smtp.muttrc
-source ~/.config/mutt/mailbox.muttrc
-source ~/.config/mutt/gpg.muttrc
+source ~/.config/mutt/accounts.muttrc
 source ~/.config/mutt/thread.muttrc
 source ~/.config/mutt/pager.muttrc
 source ~/.config/mutt/char.muttrc
