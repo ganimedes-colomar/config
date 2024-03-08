@@ -1,10 +1,13 @@
-IMAPStore migadu-alx-remote
+IMAPAccount migadu-alx-imap
 Host imap.migadu.com
 Port 993
 User alx@alejandro-colomar.es
 PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
 SSLType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore migadu-alx-remote
+Account migadu-alx-imap
 
 MaildirStore migadu-alx-local
 Path ~/mail/migadu/alx/
@@ -19,13 +22,117 @@ Expunge Both
 Patterns *
 SyncState *
 
-IMAPStore gmail-remote
+
+IMAPAccount migadu-foss-imap
+Host imap.migadu.com
+Port 993
+User foss@alejandro-colomar.es
+PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore migadu-foss-remote
+Account migadu-foss-imap
+
+MaildirStore migadu-foss-local
+Path ~/mail/migadu/foss/
+Inbox ~/mail/migadu/foss/Inbox
+SubFolders Verbatim
+
+Channel migadu-foss
+Far :migadu-foss-remote:
+Near :migadu-foss-local:
+Create Both
+Expunge Both
+Patterns *
+SyncState *
+
+
+IMAPAccount migadu-gov-imap
+Host imap.migadu.com
+Port 993
+User gov@alejandro-colomar.es
+PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore migadu-gov-remote
+Account migadu-gov-imap
+
+MaildirStore migadu-gov-local
+Path ~/mail/migadu/gov/
+Inbox ~/mail/migadu/gov/Inbox
+SubFolders Verbatim
+
+Channel migadu-gov
+Far :migadu-gov-remote:
+Near :migadu-gov-local:
+Create Both
+Expunge Both
+Patterns *
+SyncState *
+
+
+IMAPAccount migadu-legal-imap
+Host imap.migadu.com
+Port 993
+User legal@alejandro-colomar.es
+PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore migadu-legal-remote
+Account migadu-legal-imap
+
+MaildirStore migadu-legal-local
+Path ~/mail/migadu/legal/
+Inbox ~/mail/migadu/legal/Inbox
+SubFolders Verbatim
+
+Channel migadu-legal
+Far :migadu-legal-remote:
+Near :migadu-legal-local:
+Create Both
+Expunge Both
+Patterns *
+SyncState *
+
+
+IMAPAccount migadu-spam-imap
+Host imap.migadu.com
+Port 993
+User spam@alejandro-colomar.es
+PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore migadu-spam-remote
+Account migadu-spam-imap
+
+MaildirStore migadu-spam-local
+Path ~/mail/migadu/spam/
+Inbox ~/mail/migadu/spam/Inbox
+SubFolders Verbatim
+
+Channel migadu-spam
+Far :migadu-spam-remote:
+Near :migadu-spam-local:
+Create Both
+Expunge Both
+Patterns *
+SyncState *
+
+
+IMAPAccount gmail-imap
 Host imap.gmail.com
 Port 993
 User alx.manpages
 PassCmd "pass show email/gmail/alx.manpages/imap"
 SSLType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore gmail-remote
+Account gmail-imap
 
 MaildirStore gmail-local
 Path ~/mail/gmail/alx/
