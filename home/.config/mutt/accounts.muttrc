@@ -3,6 +3,7 @@ source ~/.config/mutt/account/foss/account.muttrc
 source ~/.config/mutt/account/gov/account.muttrc
 source ~/.config/mutt/account/legal/account.muttrc
 source ~/.config/mutt/account/spam/account.muttrc
+source ~/.config/mutt/account/alx_manpages/account.muttrc
 
 source ~/.config/mutt/account/alx/account.muttrc
 
@@ -11,3 +12,4 @@ macro index,compose,pager <f3> '<enter-command>source ~/.config/mutt/account/fos
 macro index,compose,pager <f4> '<enter-command>source ~/.config/mutt/account/gov/account.muttrc<enter>'
 macro index,compose,pager <f5> '<enter-command>source ~/.config/mutt/account/legal/account.muttrc<enter>'
 macro index,compose,pager <f6> '<enter-command>source ~/.config/mutt/account/spam/account.muttrc<enter>'
+macro index,compose,pager <f7> '<enter-command>source ~/.config/mutt/account/alx_manpages/account.muttrc<enter>'
