@@ -1,0 +1,2 @@
+set my_migadu_pass	= "`pass show email/migadu/alx/mailbox/alx/pass`"
+set my_korg_pass	= "`pass show www/foss/kernel/smtp/pass`"

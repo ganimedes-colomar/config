@@ -2,4 +2,4 @@ set from	= "alx@kernel.org"
 set realname	= "Alejandro Colomar"
 
 set smtp_url	= "smtps://alx@mail.kernel.org:465/"
-set smtp_pass	= "`pass show www/foss/kernel/smtp/pass`"
+set smtp_pass	= $my_korg_pass
