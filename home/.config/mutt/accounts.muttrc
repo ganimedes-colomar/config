@@ -6,8 +6,8 @@ source ~/.config/mutt/spam.muttrc
 
 source ~/.config/mutt/alx.muttrc
 
-macro index,pager <f2> '<enter-command>source ~/.config/mutt/alx.muttrc<enter>'
-macro index,pager <f3> '<enter-command>source ~/.config/mutt/foss.muttrc<enter>'
-macro index,pager <f4> '<enter-command>source ~/.config/mutt/gov.muttrc<enter>'
-macro index,pager <f5> '<enter-command>source ~/.config/mutt/legal.muttrc<enter>'
-macro index,pager <f6> '<enter-command>source ~/.config/mutt/spam.muttrc<enter>'
+macro index,compose,pager <f2> '<enter-command>source ~/.config/mutt/alx.muttrc<enter>'
+macro index,compose,pager <f3> '<enter-command>source ~/.config/mutt/foss.muttrc<enter>'
+macro index,compose,pager <f4> '<enter-command>source ~/.config/mutt/gov.muttrc<enter>'
+macro index,compose,pager <f5> '<enter-command>source ~/.config/mutt/legal.muttrc<enter>'
+macro index,compose,pager <f6> '<enter-command>source ~/.config/mutt/spam.muttrc<enter>'
