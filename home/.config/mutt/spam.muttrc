@@ -1,4 +1,0 @@
-source ~/.config/mutt/spam.smtp.muttrc
-source ~/.config/mutt/spam.folder.muttrc
-source ~/.config/mutt/mailbox.muttrc
-source ~/.config/mutt/no-gpg.muttrc

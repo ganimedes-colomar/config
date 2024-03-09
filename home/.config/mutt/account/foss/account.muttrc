@@ -1,0 +1,4 @@
+source ~/.config/mutt/account/foss/smtp.muttrc
+source ~/.config/mutt/account/foss/folder.muttrc
+source ~/.config/mutt/mailbox/migadu.muttrc
+source ~/.config/mutt/pgp/gpg.muttrc
