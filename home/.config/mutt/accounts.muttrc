@@ -5,7 +5,7 @@ source ~/.config/mutt/account/legal/account.muttrc
 source ~/.config/mutt/account/spam/account.muttrc
 source ~/.config/mutt/account/alx_manpages/account.muttrc
 
-source ~/.config/mutt/account/alx/account.muttrc
+source ~/.config/mutt/account/foss/account.muttrc
 
 macro index,compose,pager <f2> '<enter-command>source ~/.config/mutt/account/alx/account.muttrc<enter>'
 macro index,compose,pager <f3> '<enter-command>source ~/.config/mutt/account/foss/account.muttrc<enter>'
