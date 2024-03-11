@@ -1,6 +1,7 @@
-set crypt_autosign = yes
-set crypt_opportunistic_encrypt = yes
 set crypt_protected_headers_write = yes
 
 set pgp_self_encrypt = yes
 set pgp_default_key = A9348594CE31283A826FBDD8D57633D441E25BB5
+
+crypt-hook serge@hallyn.com 0xF1D08DB778185BF784002DFFE9FEEA06A85E3F9D
+send-hook ~t serge@hallyn.com 'set crypt_confirmhook=no'

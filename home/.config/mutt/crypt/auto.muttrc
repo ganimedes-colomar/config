@@ -1,0 +1,2 @@
+set crypt_autosign = yes
+set crypt_opportunistic_encrypt = yes

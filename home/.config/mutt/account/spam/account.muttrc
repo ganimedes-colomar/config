@@ -1,4 +1,0 @@
-source ~/.config/mutt/account/spam/smtp.muttrc
-source ~/.config/mutt/account/spam/folder.muttrc
-source ~/.config/mutt/mailbox/migadu.muttrc
-source ~/.config/mutt/pgp/no-gpg.muttrc

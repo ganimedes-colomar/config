@@ -1,0 +1,4 @@
+source ~/.config/mutt/account/migadu/foss/smtp.muttrc
+source ~/.config/mutt/account/migadu/foss/folder.muttrc
+source ~/.config/mutt/account/maildir/migadu.muttrc
+source ~/.config/mutt/crypt/auto.muttrc
