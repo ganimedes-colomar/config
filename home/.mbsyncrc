@@ -123,7 +123,7 @@ Patterns *
 SyncState *
 
 
-IMAPAccount gmail-imap
+IMAPAccount gmail-alx-imap
 Host imap.gmail.com
 Port 993
 User alx.manpages
@@ -131,17 +131,17 @@ PassCmd "pass show email/gmail/alx.manpages/imap"
 SSLType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
-IMAPStore gmail-remote
-Account gmail-imap
+IMAPStore gmail-alx-remote
+Account gmail-alx-imap
 
-MaildirStore gmail-local
+MaildirStore gmail-alx-local
 Path ~/mail/gmail/alx/
 Inbox ~/mail/gmail/alx/INBOX
 SubFolders Verbatim
 
-Channel gmail
-Far :gmail-remote:
-Near :gmail-local:
+Channel gmail-alx
+Far :gmail-alx-remote:
+Near :gmail-alx-local:
 Create Both
 Expunge Both
 Patterns *
