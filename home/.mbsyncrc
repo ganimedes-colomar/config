@@ -221,3 +221,28 @@ Create Both
 Expunge Both
 Patterns *
 SyncState *
+
+
+IMAPAccount gmail-alejandro-imap
+Host imap.gmail.com
+Port 993
+User alejandro.colomar
+PassCmd "pass show email/gmail/alejandro.colomar/imap"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore gmail-alejandro-remote
+Account gmail-alejandro-imap
+
+MaildirStore gmail-alejandro-local
+Path ~/mail/gmail/alejandro/
+Inbox ~/mail/gmail/alejandro/INBOX
+SubFolders Verbatim
+
+Channel gmail-alejandro
+Far :gmail-alejandro-remote:
+Near :gmail-alejandro-local:
+Create Both
+Expunge Both
+Patterns *
+SyncState *
