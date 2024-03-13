@@ -1,1 +1,3 @@
+set edit_headers = yes
+
 set signature = "~/.config/mutt/signature"
