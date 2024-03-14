@@ -98,6 +98,31 @@ Patterns *
 SyncState *
 
 
+IMAPAccount migadu-llum-imap
+Host imap.migadu.com
+Port 993
+User llum@alejandro-colomar.es
+PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore migadu-llum-remote
+Account migadu-llum-imap
+
+MaildirStore migadu-llum-local
+Path ~/mail/migadu/llum/
+Inbox ~/mail/migadu/llum/Inbox
+SubFolders Verbatim
+
+Channel migadu-llum
+Far :migadu-llum-remote:
+Near :migadu-llum-local:
+Create Both
+Expunge Both
+Patterns *
+SyncState *
+
+
 IMAPAccount migadu-spam-imap
 Host imap.migadu.com
 Port 993
