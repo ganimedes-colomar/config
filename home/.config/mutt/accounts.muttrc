@@ -5,11 +5,13 @@ source ~/.config/mutt/account/migadu/legal/account.muttrc
 source ~/.config/mutt/account/migadu/llum/account.muttrc
 source ~/.config/mutt/account/migadu/spam/account.muttrc
 source ~/.config/mutt/account/migadu/tlf/account.muttrc
+source ~/.config/mutt/account/migadu/admin/account.muttrc
 source ~/.config/mutt/account/gmail/alx/account.muttrc
 
 source ~/.config/mutt/account/migadu/foss/account.muttrc
 
 bind index,compose,pager <F2> noop
+macro index,compose,pager <F2>0 '<enter-command>source ~/.config/mutt/account/migadu/admin/account.muttrc<enter>'
 macro index,compose,pager <F2>1 '<enter-command>source ~/.config/mutt/account/migadu/alx/account.muttrc<enter>'
 macro index,compose,pager <F2>2 '<enter-command>source ~/.config/mutt/account/migadu/foss/account.muttrc<enter>'
 macro index,compose,pager <F2>3 '<enter-command>source ~/.config/mutt/account/migadu/gov/account.muttrc<enter>'

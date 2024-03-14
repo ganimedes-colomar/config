@@ -1,3 +1,28 @@
+IMAPAccount migadu-admin-imap
+Host imap.migadu.com
+Port 993
+User admin@alejandro-colomar.es
+PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore migadu-admin-remote
+Account migadu-admin-imap
+
+MaildirStore migadu-admin-local
+Path ~/mail/migadu/admin/
+Inbox ~/mail/migadu/admin/Inbox
+SubFolders Verbatim
+
+Channel migadu-admin
+Far :migadu-admin-remote:
+Near :migadu-admin-local:
+Create Both
+Expunge Both
+Patterns *
+SyncState *
+
+
 IMAPAccount migadu-alx-imap
 Host imap.migadu.com
 Port 993
