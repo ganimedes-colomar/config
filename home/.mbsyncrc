@@ -148,6 +148,31 @@ Patterns *
 SyncState *
 
 
+IMAPAccount migadu-tlf-imap
+Host imap.migadu.com
+Port 993
+User tlf@alejandro-colomar.es
+PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore migadu-tlf-remote
+Account migadu-tlf-imap
+
+MaildirStore migadu-tlf-local
+Path ~/mail/migadu/tlf/
+Inbox ~/mail/migadu/tlf/Inbox
+SubFolders Verbatim
+
+Channel migadu-tlf
+Far :migadu-tlf-remote:
+Near :migadu-tlf-local:
+Create Both
+Expunge Both
+Patterns *
+SyncState *
+
+
 IMAPAccount gmail-alx-imap
 Host imap.gmail.com
 Port 993
