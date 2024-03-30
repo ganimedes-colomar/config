@@ -198,6 +198,31 @@ Patterns *
 SyncState *
 
 
+IMAPAccount migadu-travel-imap
+Host imap.migadu.com
+Port 993
+User travel@alejandro-colomar.es
+PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore migadu-travel-remote
+Account migadu-travel-imap
+
+MaildirStore migadu-travel-local
+Path ~/mail/migadu/travel/
+Inbox ~/mail/migadu/travel/Inbox
+SubFolders Verbatim
+
+Channel migadu-travel
+Far :migadu-travel-remote:
+Near :migadu-travel-local:
+Create Both
+Expunge Both
+Patterns *
+SyncState *
+
+
 IMAPAccount gmail-alx-imap
 Host imap.gmail.com
 Port 993
