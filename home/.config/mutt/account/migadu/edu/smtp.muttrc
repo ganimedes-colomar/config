@@ -1,0 +1,5 @@
+set from	= "edu@alejandro-colomar.es"
+set realname	= "Alejandro Colomar"
+
+set smtp_url	= "smtps://edu@alejandro-colomar.es@smtp.migadu.com:465/"
+set smtp_pass	= $my_migadu_pass
