@@ -12,16 +12,16 @@ source ~/.config/mutt/account/gmail/alx/account.muttrc
 
 source ~/.config/mutt/account/migadu/foss/account.muttrc
 
-bind index,compose,pager <F2> noop
-macro index,compose,pager <F2>0 '<enter-command>source ~/.config/mutt/account/migadu/admin/account.muttrc<enter>'
-macro index,compose,pager <F2>1 '<enter-command>source ~/.config/mutt/account/migadu/alx/account.muttrc<enter>'
-macro index,compose,pager <F2>2 '<enter-command>source ~/.config/mutt/account/migadu/edu/account.muttrc<enter>'
-macro index,compose,pager <F2>3 '<enter-command>source ~/.config/mutt/account/migadu/foss/account.muttrc<enter>'
-macro index,compose,pager <F2>4 '<enter-command>source ~/.config/mutt/account/migadu/gov/account.muttrc<enter>'
-macro index,compose,pager <F2>5 '<enter-command>source ~/.config/mutt/account/migadu/legal/account.muttrc<enter>'
-macro index,compose,pager <F2>6 '<enter-command>source ~/.config/mutt/account/migadu/llum/account.muttrc<enter>'
-macro index,compose,pager <F2>7 '<enter-command>source ~/.config/mutt/account/migadu/spam/account.muttrc<enter>'
-macro index,compose,pager <F2>8 '<enter-command>source ~/.config/mutt/account/migadu/tlf/account.muttrc<enter>'
-macro index,compose,pager <F2>9 '<enter-command>source ~/.config/mutt/account/migadu/travel/account.muttrc<enter>'
-bind index,compose,pager <F3> noop
-macro index,compose,pager <F3>2 '<enter-command>source ~/.config/mutt/account/gmail/alx/account.muttrc<enter>'
+bind index,pager <F2> noop
+macro index,pager <F2>0 '<enter-command>source ~/.config/mutt/account/migadu/admin/account.muttrc<enter>'
+macro index,pager <F2>1 '<enter-command>source ~/.config/mutt/account/migadu/alx/account.muttrc<enter>'
+macro index,pager <F2>2 '<enter-command>source ~/.config/mutt/account/migadu/edu/account.muttrc<enter>'
+macro index,pager <F2>3 '<enter-command>source ~/.config/mutt/account/migadu/foss/account.muttrc<enter>'
+macro index,pager <F2>4 '<enter-command>source ~/.config/mutt/account/migadu/gov/account.muttrc<enter>'
+macro index,pager <F2>5 '<enter-command>source ~/.config/mutt/account/migadu/legal/account.muttrc<enter>'
+macro index,pager <F2>6 '<enter-command>source ~/.config/mutt/account/migadu/llum/account.muttrc<enter>'
+macro index,pager <F2>7 '<enter-command>source ~/.config/mutt/account/migadu/spam/account.muttrc<enter>'
+macro index,pager <F2>8 '<enter-command>source ~/.config/mutt/account/migadu/tlf/account.muttrc<enter>'
+macro index,pager <F2>9 '<enter-command>source ~/.config/mutt/account/migadu/travel/account.muttrc<enter>'
+bind index,pager <F3> noop
+macro index,pager <F3>2 '<enter-command>source ~/.config/mutt/account/gmail/alx/account.muttrc<enter>'
