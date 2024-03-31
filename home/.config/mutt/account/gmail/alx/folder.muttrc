@@ -1,1 +1,3 @@
 set folder      = "~/mail/gmail/alx/"
+
+folder-hook ~/mail/gmail/alx/ source ~/.config/mutt/account/gmail/alx/account.muttrc

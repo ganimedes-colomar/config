@@ -1,1 +1,3 @@
 set folder      = "~/mail/migadu/legal/"
+
+folder-hook ~/mail/migadu/legal/ source ~/.config/mutt/account/migadu/legal/account.muttrc

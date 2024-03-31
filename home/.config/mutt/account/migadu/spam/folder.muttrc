@@ -1,1 +1,3 @@
 set folder      = "~/mail/migadu/spam/"
+
+folder-hook ~/mail/migadu/spam/ source ~/.config/mutt/account/migadu/spam/account.muttrc
