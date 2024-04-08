@@ -1,3 +1,1 @@
 set folder      = "~/mail/migadu/tlf/"
-
-folder-hook ~/mail/migadu/tlf/ source ~/.config/mutt/account/migadu/tlf/account.muttrc
