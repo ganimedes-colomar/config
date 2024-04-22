@@ -1,3 +1,4 @@
+set crypt_autosmime = no
 set crypt_confirmhook=no
 set crypt_protected_headers_write = yes
 
