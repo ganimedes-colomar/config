@@ -1,4 +1,5 @@
 unignore Date
 unignore Return-Path From To Cc Bcc Sender Reply-To
 unignore Mail-Followup-To X-Original-To
+unignore Subject
 unignore Message-Id References In-Reply-To
