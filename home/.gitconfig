@@ -19,6 +19,7 @@
 	excludesFile = ~/.config/git/gitignore
 [diff]
 	algorithm = histogram
+	mnemonicPrefix = true
 [diff "man"]
 	xfuncname = "^\\.S[SHsh] .*$"
 [init]
