@@ -1,3 +1,4 @@
+source ~/.config/mutt/account/migadu/alex/account.muttrc
 source ~/.config/mutt/account/migadu/alx/account.muttrc
 source ~/.config/mutt/account/migadu/edu/account.muttrc
 source ~/.config/mutt/account/migadu/foss/account.muttrc
@@ -12,6 +13,7 @@ source ~/.config/mutt/account/gmail/alx/account.muttrc
 
 source ~/.config/mutt/account/migadu/foss/account.muttrc
 
+folder-hook ~/mail/migadu/alex/ source ~/.config/mutt/account/migadu/alex/account.muttrc
 folder-hook ~/mail/migadu/alx/ source ~/.config/mutt/account/migadu/alx/account.muttrc
 folder-hook ~/mail/migadu/edu/ source ~/.config/mutt/account/migadu/edu/account.muttrc
 folder-hook ~/mail/migadu/foss/ source ~/.config/mutt/account/migadu/foss/account.muttrc
