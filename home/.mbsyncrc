@@ -273,6 +273,31 @@ Patterns *
 SyncState *
 
 
+IMAPAccount migadu-tere-imap
+Host imap.migadu.com
+Port 993
+User tere@teresandres.es
+PassCmd "pass show email/migadu/alx/mailbox/tere/pass"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore migadu-tere-remote
+Account migadu-tere-imap
+
+MaildirStore migadu-tere-local
+Path ~/mail/migadu/tere/
+Inbox ~/mail/migadu/tere/Inbox
+SubFolders Verbatim
+
+Channel migadu-tere
+Far :migadu-tere-remote:
+Near :migadu-tere-local:
+Create Both
+Expunge Both
+Patterns *
+SyncState *
+
+
 IMAPAccount gmail-alx-imap
 Host imap.gmail.com
 Port 993
