@@ -73,6 +73,31 @@ Patterns *
 SyncState *
 
 
+IMAPAccount migadu-consulting-imap
+Host imap.migadu.com
+Port 993
+User consulting@alejandro-colomar.es
+PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore migadu-consulting-remote
+Account migadu-consulting-imap
+
+MaildirStore migadu-consulting-local
+Path ~/mail/migadu/consulting/
+Inbox ~/mail/migadu/consulting/Inbox
+SubFolders Verbatim
+
+Channel migadu-consulting
+Far :migadu-consulting-remote:
+Near :migadu-consulting-local:
+Create Both
+Expunge Both
+Patterns *
+SyncState *
+
+
 IMAPAccount migadu-edu-imap
 Host imap.migadu.com
 Port 993
