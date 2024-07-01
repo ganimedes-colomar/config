@@ -73,6 +73,31 @@ Patterns *
 SyncState *
 
 
+IMAPAccount migadu-banc-imap
+Host imap.migadu.com
+Port 993
+User banc@alejandro-colomar.es
+PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore migadu-banc-remote
+Account migadu-banc-imap
+
+MaildirStore migadu-banc-local
+Path ~/mail/migadu/banc/
+Inbox ~/mail/migadu/banc/Inbox
+SubFolders Verbatim
+
+Channel migadu-banc
+Far :migadu-banc-remote:
+Near :migadu-banc-local:
+Create Both
+Expunge Both
+Patterns *
+SyncState *
+
+
 IMAPAccount migadu-consulting-imap
 Host imap.migadu.com
 Port 993
