@@ -1,3 +1,28 @@
+IMAPAccount migadu-activitats-imap
+Host imap.migadu.com
+Port 993
+User activitats@alejandro-colomar.es
+PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore migadu-activitats-remote
+Account migadu-activitats-imap
+
+MaildirStore migadu-activitats-local
+Path ~/mail/migadu/activitats/
+Inbox ~/mail/migadu/activitats/Inbox
+SubFolders Verbatim
+
+Channel migadu-activitats
+Far :migadu-activitats-remote:
+Near :migadu-activitats-local:
+Create Both
+Expunge Both
+Patterns *
+SyncState *
+
+
 IMAPAccount migadu-admin-imap
 Host imap.migadu.com
 Port 993
