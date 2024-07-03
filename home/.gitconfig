@@ -17,7 +17,6 @@
 [core]
 	editor = vim
 	excludesFile = ~/.config/git/gitignore
-	pager = less -S
 [diff]
 	algorithm = histogram
 	mnemonicPrefix = true
@@ -27,6 +26,7 @@
 	defaultBranch = main
 [pager]
 	status = true
+	log = less -S
 [pull]
 	ff = only
 [sendemail]
