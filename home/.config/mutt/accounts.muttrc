@@ -4,6 +4,7 @@ source ~/.config/mutt/account/migadu/alx/account.muttrc
 source ~/.config/mutt/account/migadu/banc/account.muttrc
 source ~/.config/mutt/account/migadu/consulting/account.muttrc
 source ~/.config/mutt/account/migadu/edu/account.muttrc
+source ~/.config/mutt/account/migadu/esport/account.muttrc
 source ~/.config/mutt/account/migadu/foss/account.muttrc
 source ~/.config/mutt/account/migadu/gov/account.muttrc
 source ~/.config/mutt/account/migadu/legal/account.muttrc
@@ -23,6 +24,7 @@ folder-hook ~/mail/migadu/alx/ source ~/.config/mutt/account/migadu/alx/account.
 folder-hook ~/mail/migadu/banc/ source ~/.config/mutt/account/migadu/banc/account.muttrc
 folder-hook ~/mail/migadu/consulting/ source ~/.config/mutt/account/migadu/consulting/account.muttrc
 folder-hook ~/mail/migadu/edu/ source ~/.config/mutt/account/migadu/edu/account.muttrc
+folder-hook ~/mail/migadu/esport/ source ~/.config/mutt/account/migadu/esport/account.muttrc
 folder-hook ~/mail/migadu/foss/ source ~/.config/mutt/account/migadu/foss/account.muttrc
 folder-hook ~/mail/migadu/gov/ source ~/.config/mutt/account/migadu/gov/account.muttrc
 folder-hook ~/mail/migadu/legal/ source ~/.config/mutt/account/migadu/legal/account.muttrc

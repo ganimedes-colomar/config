@@ -173,6 +173,31 @@ Patterns *
 SyncState *
 
 
+IMAPAccount migadu-esport-imap
+Host imap.migadu.com
+Port 993
+User esport@alejandro-colomar.es
+PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore migadu-esport-remote
+Account migadu-esport-imap
+
+MaildirStore migadu-esport-local
+Path ~/mail/migadu/esport/
+Inbox ~/mail/migadu/esport/Inbox
+SubFolders Verbatim
+
+Channel migadu-esport
+Far :migadu-esport-remote:
+Near :migadu-esport-local:
+Create Both
+Expunge Both
+Patterns *
+SyncState *
+
+
 IMAPAccount migadu-foss-imap
 Host imap.migadu.com
 Port 993
