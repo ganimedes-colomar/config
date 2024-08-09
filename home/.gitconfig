@@ -23,6 +23,7 @@
 [diff "man"]
 	xfuncname = "^\\.S[SHsh] .*$"
 [format]
+	thread = true
 	useAutoBase = whenAble
 [init]
 	defaultBranch = main
