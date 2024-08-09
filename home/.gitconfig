@@ -22,6 +22,8 @@
 	mnemonicPrefix = true
 [diff "man"]
 	xfuncname = "^\\.S[SHsh] .*$"
+[format]
+	useAutoBase = whenAble
 [init]
 	defaultBranch = main
 [pager]
