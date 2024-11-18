@@ -148,6 +148,31 @@ Patterns *
 SyncState *
 
 
+IMAPAccount migadu-digikey-imap
+Host imap.migadu.com
+Port 993
+User digikey@alejandro-colomar.es
+PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore migadu-digikey-remote
+Account migadu-digikey-imap
+
+MaildirStore migadu-digikey-local
+Path ~/mail/migadu/digikey/
+Inbox ~/mail/migadu/digikey/Inbox
+SubFolders Verbatim
+
+Channel migadu-digikey
+Far :migadu-digikey-remote:
+Near :migadu-digikey-local:
+Create Both
+Expunge Both
+Patterns *
+SyncState *
+
+
 IMAPAccount migadu-edu-imap
 Host imap.migadu.com
 Port 993
