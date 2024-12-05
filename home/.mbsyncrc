@@ -398,6 +398,31 @@ Patterns *
 SyncState *
 
 
+IMAPAccount migadu-une-imap
+Host imap.migadu.com
+Port 993
+User une@alejandro-colomar.es
+PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore migadu-une-remote
+Account migadu-une-imap
+
+MaildirStore migadu-une-local
+Path ~/mail/migadu/une/
+Inbox ~/mail/migadu/une/Inbox
+SubFolders Verbatim
+
+Channel migadu-une
+Far :migadu-une-remote:
+Near :migadu-une-local:
+Create Both
+Expunge Both
+Patterns *
+SyncState *
+
+
 IMAPAccount migadu-tere-imap
 Host imap.migadu.com
 Port 993
