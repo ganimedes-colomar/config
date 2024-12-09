@@ -2,7 +2,7 @@
 	lgo = log --graph --oneline --abbrev=12
 	lago = lgo --all
 	lg = log --graph --abbrev=12 --decorate --date=short \
-		--format=format:'%C(auto)%h (%cd,%C(reset) \"%C(white)%s%C(reset)\")%C(auto)%d%C(reset)%n''  %C(magenta)%G?%C(reset) %C(dim white)- %ad, %an - %cd, %cn%C(reset)'
+		--format=format:'%C(auto)%h%C(reset) %C(white)(%cd, \"%C(reset)%C(auto)%s%C(reset)%C(white)\")%C(reset)%C(auto)%d%C(reset)%n''  %C(magenta)%G?%C(reset) %C(dim white)- %ad, %an - %cd, %cn%C(reset)'
 	tree = lg --all
 	ref = show --no-patch --abbrev=12 --date=short \
 		--format=format:'%C(auto)%h (%cd,%C(reset) \"%C(white)%s%C(reset)\")'
