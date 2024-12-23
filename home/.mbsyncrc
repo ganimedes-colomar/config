@@ -223,6 +223,31 @@ Patterns *
 SyncState *
 
 
+IMAPAccount migadu-food-imap
+Host imap.migadu.com
+Port 993
+User food@alejandro-colomar.es
+PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore migadu-food-remote
+Account migadu-food-imap
+
+MaildirStore migadu-food-local
+Path ~/mail/migadu/food/
+Inbox ~/mail/migadu/food/Inbox
+SubFolders Verbatim
+
+Channel migadu-food
+Far :migadu-food-remote:
+Near :migadu-food-local:
+Create Both
+Expunge Both
+Patterns *
+SyncState *
+
+
 IMAPAccount migadu-foss-imap
 Host imap.migadu.com
 Port 993
