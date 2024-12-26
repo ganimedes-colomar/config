@@ -90,9 +90,16 @@ fstab:
 
 .PHONY: git
 git:
+	cd $(SYSCONFDIR) && \
+	find git* -type f \
+	|while read f; do \
+		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
+	done;
+
+.PHONY: git.home
+git.home:
 	cd $(HOMEDIR) && \
-	find . -type f \
-	|grep git \
+	find .gitconfig -type f \
 	|while read f; do \
 		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
 	done;
