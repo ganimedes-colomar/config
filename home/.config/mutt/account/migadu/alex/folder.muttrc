@@ -1,1 +1,1 @@
-set folder      = "~/mail/migadu/alex/"
+set folder      = "/srv/mail/migadu/alex/"
