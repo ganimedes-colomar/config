@@ -150,8 +150,8 @@ sudo:
 
 .PHONY: vim
 vim:
-	cd $(HOMEDIR) && \
-	find .vim* -type f \
+	cd $(SYSCONFDIR) && \
+	find vim/ -type f \
 	|while read f; do \
-		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
+		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
