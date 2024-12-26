@@ -1,0 +1,9 @@
+# alx BEGIN
+alx-usb-g	/dev/sda1	none	noauto
+alx-usb-s	/dev/sda2	none	noauto
+alx-usb-p	/dev/sda3	none	noauto
+alx-usb-m	/dev/sda4	none	noauto
+alx-usb-a	/dev/sda5	none	noauto
+alx-opt	/dev/nvme0n1p4	none	noauto
+alx-srv	/dev/nvme0n1p5	none	noauto
+# alx END

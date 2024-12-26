@@ -48,6 +48,16 @@ console:
 		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
 
+.PHONY: crypttab
+crypttab:
+	cd $(SYSCONFDIR) && \
+	find crypttab -type f \
+	|while read f; do \
+		sed '/# alx\s*BEGIN/,/# alx\s*END/d' \
+			-i "$(DESTDIR)$(sysconfdir)/$$f" ||:; \
+		cat "$(SYSCONFDIR)/$$f" >> "$(DESTDIR)$(sysconfdir)/$$f"; \
+	done;
+
 .PHONY: doas
 doas:
 	cd $(SYSCONFDIR) && \
