@@ -1,0 +1,9 @@
+# alx BEGIN
+set devel_security = yes
+
+source /etc/mutt/crypt.muttrc
+source /etc/mutt/index.muttrc
+source /etc/mutt/pager.muttrc
+source /etc/mutt/char.muttrc
+source /etc/mutt/edit.muttrc
+# alx END

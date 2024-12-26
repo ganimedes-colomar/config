@@ -1,7 +1,4 @@
 source ~/.config/mutt/pass.muttrc
 source ~/.config/mutt/accounts.muttrc
 source ~/.config/mutt/crypt.muttrc
-source ~/.config/mutt/index.muttrc
-source ~/.config/mutt/pager.muttrc
-source ~/.config/mutt/char.muttrc
 source ~/.config/mutt/edit.muttrc

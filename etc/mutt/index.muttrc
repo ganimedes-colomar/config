@@ -1,3 +1,3 @@
 bind index,pager <Esc>n search-opposite
 
-source ~/.config/mutt/thread.muttrc
+source /etc/mutt/thread.muttrc
