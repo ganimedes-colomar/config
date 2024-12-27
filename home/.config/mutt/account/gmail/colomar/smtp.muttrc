@@ -1,0 +1,5 @@
+set from	= "colomar.6.4.3@gmail.com"
+set realname	= "Alejandro Colomar"
+
+set smtp_url	= "smtps://colomar.6.4.3@smtp.gmail.com:465/"
+set smtp_pass	= $my_gmail_colomar_pass

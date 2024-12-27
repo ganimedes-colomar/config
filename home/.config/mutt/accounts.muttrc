@@ -18,6 +18,7 @@ source ~/.config/mutt/account/migadu/une/account.muttrc
 source ~/.config/mutt/account/migadu/admin/account.muttrc
 source ~/.config/mutt/account/migadu/tere/account.muttrc
 source ~/.config/mutt/account/gmail/alx/account.muttrc
+source ~/.config/mutt/account/gmail/colomar/account.muttrc
 
 source ~/.config/mutt/account/migadu/foss/account.muttrc
 
@@ -41,6 +42,7 @@ folder-hook /srv/mail/migadu/une/ source ~/.config/mutt/account/migadu/une/accou
 folder-hook /srv/mail/migadu/admin/ source ~/.config/mutt/account/migadu/admin/account.muttrc
 folder-hook /srv/mail/migadu/tere/ source ~/.config/mutt/account/migadu/tere/account.muttrc
 folder-hook /srv/mail/gmail/alx/ source ~/.config/mutt/account/gmail/alx/account.muttrc
+folder-hook /srv/mail/gmail/colomar/ source ~/.config/mutt/account/gmail/colomar/account.muttrc
 
 bind index,pager <F2> noop
 macro index,pager <F2>0 '<enter-command>source ~/.config/mutt/account/migadu/admin/account.muttrc<enter>'
