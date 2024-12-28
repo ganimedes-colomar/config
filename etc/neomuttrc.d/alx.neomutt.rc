@@ -1,0 +1,3 @@
+set devel_security = yes
+
+source /etc/Muttrc.d/alx.mutt.rc

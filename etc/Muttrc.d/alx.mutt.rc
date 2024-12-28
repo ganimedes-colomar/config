@@ -1,0 +1,5 @@
+source /etc/Muttrc.d/alx/crypt.muttrc
+source /etc/Muttrc.d/alx/index.muttrc
+source /etc/Muttrc.d/alx/pager.muttrc
+source /etc/Muttrc.d/alx/char.muttrc
+source /etc/Muttrc.d/alx/edit.muttrc

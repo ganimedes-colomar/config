@@ -100,16 +100,9 @@ mbsync:
 .PHONY: mutt
 mutt:
 	cd $(SYSCONFDIR) && \
-	find mutt/ -type f \
+	find Muttrc.d/ -type f \
 	|while read f; do \
 		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
-	done;
-	cd $(SYSCONFDIR) && \
-	find Muttrc neomuttrc -type f \
-	|while read f; do \
-		sed '/# alx\s*BEGIN/,/# alx\s*END/d' \
-			-i "$(DESTDIR)$(sysconfdir)/$$f" ||:; \
-		cat "$(SYSCONFDIR)/$$f" >> "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
 
 .PHONY: mutt.home
@@ -118,6 +111,14 @@ mutt.home:
 	find .config/mutt/ -type f \
 	|while read f; do \
 		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
+	done;
+
+.PHONY: neomutt
+neomutt: mutt
+	cd $(SYSCONFDIR) && \
+	find neomuttrc.d/ -type f \
+	|while read f; do \
+		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
 
 .PHONY: sshd
