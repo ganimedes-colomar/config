@@ -1,9 +1,22 @@
 # alx BEGIN
+/dev/mapper/alx-usb-g	/home/alx/keyring/bak/gnupg	ext4	noauto,defaults,user=alx
+/dev/mapper/alx-usb-s	/home/alx/keyring/bak/ssh	ext4	noauto,defaults,user=alx
+/dev/mapper/alx-usb-p	/home/alx/keyring/bak/password-store	ext4	noauto,defaults,user=alx
+/dev/mapper/alx-usb-m	/home/alx/keyring/bak/master	ext4	noauto,defaults,user=alx
+/dev/mapper/alx-usb-a	/home/alx/keyring/bak/abook	ext4	noauto,defaults,user=alx
+
 /dev/mapper/alx-usb-g	/home/alx/.gnupg	ext4	noauto,defaults,user=alx
 /dev/mapper/alx-usb-s	/home/alx/.ssh	ext4	noauto,defaults,user=alx
 /dev/mapper/alx-usb-p	/home/alx/.password-store	ext4	noauto,defaults,user=alx
 /dev/mapper/alx-usb-m	/home/alx/keyring/master	ext4	noauto,defaults,user=alx
 /dev/mapper/alx-usb-a	/home/alx/.abook	ext4	noauto,defaults,user=alx
+
+/dev/mapper/alx-k-g	/home/alx/.gnupg	ext4	noauto,defaults,user=alx
+/dev/mapper/alx-k-s	/home/alx/.ssh	ext4	noauto,defaults,user=alx
+/dev/mapper/alx-k-p	/home/alx/.password-store	ext4	noauto,defaults,user=alx
+/dev/mapper/alx-k-m	/home/alx/keyring/master	ext4	noauto,defaults,user=alx
+/dev/mapper/alx-k-a	/home/alx/.abook	ext4	noauto,defaults,user=alx
+
 /dev/mapper/alx-opt	/opt	ext4	noauto,defaults
 /dev/mapper/alx-srv	/srv	ext4	noauto,defaults
 # alx END
