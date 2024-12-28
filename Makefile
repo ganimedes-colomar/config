@@ -12,17 +12,6 @@ INSTALL		= install $(INSTALL_OPTS)
 INSTALL_DATA	= $(INSTALL) -m 644
 INSTALL_DIR	= $(INSTALL) -m 755 -d
 
-remotes	= \
-	builder0 \
-	builder1 \
-	builder2 \
-	manager0 \
-	manager1 \
-	manager2 \
-	worker0 \
-	worker1 \
-	worker2
-
 .PHONY: apt
 apt:
 	cd $(SYSCONFDIR) && \
@@ -66,18 +55,6 @@ doas:
 		$(INSTALL) -m 440 -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
 
-.PHONY: docker
-docker:
-	usermod -aG docker $(SUDO_USER);
-
-.PHONY: docker-contexts
-docker-contexts:
-	for c in $(remotes); do \
-		r="ssh://$${c}.alejandro-colomar.es"; \
-		echo "	DOCKER context	$$c $$r"; \
-		docker context create "$$c" --docker "host=$$r" >/dev/null ||:; \
-	done;
-
 .PHONY: fstab
 fstab:
 	cd $(SYSCONFDIR) && \
@@ -110,16 +87,6 @@ groff:
 	find groff/ -type f \
 	|while read f; do \
 		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
-	done;
-
-.PHONY: hosts
-hosts:
-	cd $(SYSCONFDIR) && \
-	find hosts -type f \
-	|while read f; do \
-		sed '/# alejandro-colomar.es\s*BEGIN/,/# alejandro-colomar.es\s*END/d' \
-			-i "$(DESTDIR)$(sysconfdir)/$$f" ||:; \
-		cat "$(SYSCONFDIR)/$$f" >> "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
 
 .PHONY: mbsync
