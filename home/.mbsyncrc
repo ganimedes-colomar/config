@@ -10,8 +10,8 @@ IMAPStore migadu-activitats-remote
 Account migadu-activitats-imap
 
 MaildirStore migadu-activitats-local
-Path /srv/mail/migadu/activitats/
-Inbox /srv/mail/migadu/activitats/Inbox
+Path ~/mail/migadu/activitats/
+Inbox ~/mail/migadu/activitats/Inbox
 SubFolders Verbatim
 
 Channel migadu-activitats
@@ -35,8 +35,8 @@ IMAPStore migadu-admin-remote
 Account migadu-admin-imap
 
 MaildirStore migadu-admin-local
-Path /srv/mail/migadu/admin/
-Inbox /srv/mail/migadu/admin/Inbox
+Path ~/mail/migadu/admin/
+Inbox ~/mail/migadu/admin/Inbox
 SubFolders Verbatim
 
 Channel migadu-admin
@@ -60,8 +60,8 @@ IMAPStore migadu-alex-remote
 Account migadu-alex-imap
 
 MaildirStore migadu-alex-local
-Path /srv/mail/migadu/alex/
-Inbox /srv/mail/migadu/alex/Inbox
+Path ~/mail/migadu/alex/
+Inbox ~/mail/migadu/alex/Inbox
 SubFolders Verbatim
 
 Channel migadu-alex
@@ -85,8 +85,8 @@ IMAPStore migadu-alx-remote
 Account migadu-alx-imap
 
 MaildirStore migadu-alx-local
-Path /srv/mail/migadu/alx/
-Inbox /srv/mail/migadu/alx/Inbox
+Path ~/mail/migadu/alx/
+Inbox ~/mail/migadu/alx/Inbox
 SubFolders Verbatim
 
 Channel migadu-alx
@@ -110,8 +110,8 @@ IMAPStore migadu-banc-remote
 Account migadu-banc-imap
 
 MaildirStore migadu-banc-local
-Path /srv/mail/migadu/banc/
-Inbox /srv/mail/migadu/banc/Inbox
+Path ~/mail/migadu/banc/
+Inbox ~/mail/migadu/banc/Inbox
 SubFolders Verbatim
 
 Channel migadu-banc
@@ -135,8 +135,8 @@ IMAPStore migadu-consulting-remote
 Account migadu-consulting-imap
 
 MaildirStore migadu-consulting-local
-Path /srv/mail/migadu/consulting/
-Inbox /srv/mail/migadu/consulting/Inbox
+Path ~/mail/migadu/consulting/
+Inbox ~/mail/migadu/consulting/Inbox
 SubFolders Verbatim
 
 Channel migadu-consulting
@@ -160,8 +160,8 @@ IMAPStore migadu-digikey-remote
 Account migadu-digikey-imap
 
 MaildirStore migadu-digikey-local
-Path /srv/mail/migadu/digikey/
-Inbox /srv/mail/migadu/digikey/Inbox
+Path ~/mail/migadu/digikey/
+Inbox ~/mail/migadu/digikey/Inbox
 SubFolders Verbatim
 
 Channel migadu-digikey
@@ -185,8 +185,8 @@ IMAPStore migadu-edu-remote
 Account migadu-edu-imap
 
 MaildirStore migadu-edu-local
-Path /srv/mail/migadu/edu/
-Inbox /srv/mail/migadu/edu/Inbox
+Path ~/mail/migadu/edu/
+Inbox ~/mail/migadu/edu/Inbox
 SubFolders Verbatim
 
 Channel migadu-edu
@@ -210,8 +210,8 @@ IMAPStore migadu-esport-remote
 Account migadu-esport-imap
 
 MaildirStore migadu-esport-local
-Path /srv/mail/migadu/esport/
-Inbox /srv/mail/migadu/esport/Inbox
+Path ~/mail/migadu/esport/
+Inbox ~/mail/migadu/esport/Inbox
 SubFolders Verbatim
 
 Channel migadu-esport
@@ -235,8 +235,8 @@ IMAPStore migadu-food-remote
 Account migadu-food-imap
 
 MaildirStore migadu-food-local
-Path /srv/mail/migadu/food/
-Inbox /srv/mail/migadu/food/Inbox
+Path ~/mail/migadu/food/
+Inbox ~/mail/migadu/food/Inbox
 SubFolders Verbatim
 
 Channel migadu-food
@@ -260,8 +260,8 @@ IMAPStore migadu-foss-remote
 Account migadu-foss-imap
 
 MaildirStore migadu-foss-local
-Path /srv/mail/migadu/foss/
-Inbox /srv/mail/migadu/foss/Inbox
+Path ~/mail/migadu/foss/
+Inbox ~/mail/migadu/foss/Inbox
 SubFolders Verbatim
 
 Channel migadu-foss
@@ -285,8 +285,8 @@ IMAPStore migadu-gov-remote
 Account migadu-gov-imap
 
 MaildirStore migadu-gov-local
-Path /srv/mail/migadu/gov/
-Inbox /srv/mail/migadu/gov/Inbox
+Path ~/mail/migadu/gov/
+Inbox ~/mail/migadu/gov/Inbox
 SubFolders Verbatim
 
 Channel migadu-gov
@@ -310,8 +310,8 @@ IMAPStore migadu-legal-remote
 Account migadu-legal-imap
 
 MaildirStore migadu-legal-local
-Path /srv/mail/migadu/legal/
-Inbox /srv/mail/migadu/legal/Inbox
+Path ~/mail/migadu/legal/
+Inbox ~/mail/migadu/legal/Inbox
 SubFolders Verbatim
 
 Channel migadu-legal
@@ -335,8 +335,8 @@ IMAPStore migadu-llum-remote
 Account migadu-llum-imap
 
 MaildirStore migadu-llum-local
-Path /srv/mail/migadu/llum/
-Inbox /srv/mail/migadu/llum/Inbox
+Path ~/mail/migadu/llum/
+Inbox ~/mail/migadu/llum/Inbox
 SubFolders Verbatim
 
 Channel migadu-llum
@@ -360,8 +360,8 @@ IMAPStore migadu-spam-remote
 Account migadu-spam-imap
 
 MaildirStore migadu-spam-local
-Path /srv/mail/migadu/spam/
-Inbox /srv/mail/migadu/spam/Inbox
+Path ~/mail/migadu/spam/
+Inbox ~/mail/migadu/spam/Inbox
 SubFolders Verbatim
 
 Channel migadu-spam
@@ -385,8 +385,8 @@ IMAPStore migadu-tlf-remote
 Account migadu-tlf-imap
 
 MaildirStore migadu-tlf-local
-Path /srv/mail/migadu/tlf/
-Inbox /srv/mail/migadu/tlf/Inbox
+Path ~/mail/migadu/tlf/
+Inbox ~/mail/migadu/tlf/Inbox
 SubFolders Verbatim
 
 Channel migadu-tlf
@@ -410,8 +410,8 @@ IMAPStore migadu-travel-remote
 Account migadu-travel-imap
 
 MaildirStore migadu-travel-local
-Path /srv/mail/migadu/travel/
-Inbox /srv/mail/migadu/travel/Inbox
+Path ~/mail/migadu/travel/
+Inbox ~/mail/migadu/travel/Inbox
 SubFolders Verbatim
 
 Channel migadu-travel
@@ -435,8 +435,8 @@ IMAPStore migadu-une-remote
 Account migadu-une-imap
 
 MaildirStore migadu-une-local
-Path /srv/mail/migadu/une/
-Inbox /srv/mail/migadu/une/Inbox
+Path ~/mail/migadu/une/
+Inbox ~/mail/migadu/une/Inbox
 SubFolders Verbatim
 
 Channel migadu-une
@@ -460,8 +460,8 @@ IMAPStore migadu-tere-remote
 Account migadu-tere-imap
 
 MaildirStore migadu-tere-local
-Path /srv/mail/migadu/tere/
-Inbox /srv/mail/migadu/tere/Inbox
+Path ~/mail/migadu/tere/
+Inbox ~/mail/migadu/tere/Inbox
 SubFolders Verbatim
 
 Channel migadu-tere
@@ -485,8 +485,8 @@ IMAPStore gmail-alx-remote
 Account gmail-alx-imap
 
 MaildirStore gmail-alx-local
-Path /srv/mail/gmail/alx/
-Inbox /srv/mail/gmail/alx/INBOX
+Path ~/mail/gmail/alx/
+Inbox ~/mail/gmail/alx/INBOX
 SubFolders Verbatim
 
 Channel gmail-alx
@@ -510,8 +510,8 @@ IMAPStore gmail-alejandro-remote
 Account gmail-alejandro-imap
 
 MaildirStore gmail-alejandro-local
-Path /srv/mail/gmail/alejandro/
-Inbox /srv/mail/gmail/alejandro/INBOX
+Path ~/mail/gmail/alejandro/
+Inbox ~/mail/gmail/alejandro/INBOX
 SubFolders Verbatim
 
 Channel gmail-alejandro
@@ -535,8 +535,8 @@ IMAPStore gmail-colomar-remote
 Account gmail-colomar-imap
 
 MaildirStore gmail-colomar-local
-Path /srv/mail/gmail/colomar/
-Inbox /srv/mail/gmail/colomar/INBOX
+Path ~/mail/gmail/colomar/
+Inbox ~/mail/gmail/colomar/INBOX
 SubFolders Verbatim
 
 Channel gmail-colomar

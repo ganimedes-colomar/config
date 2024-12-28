@@ -25,12 +25,12 @@ au filetype yaml setlocal shiftwidth=4
 au filetype yaml setlocal softtabstop=4
 au filetype yaml setlocal tabstop=5
 
-au bufnewfile,bufread /srv/src/linux/man-pages/*/man*/*.[0-9]* setlocal expandtab
-au bufnewfile,bufread /srv/src/linux/man-pages/*/man*/*.[0-9]* setlocal shiftwidth=4
-au bufnewfile,bufread /srv/src/linux/man-pages/*/man*/*.[0-9]* setlocal softtabstop=4
-au bufnewfile,bufread /srv/src/linux/man-pages/*/man*/*.[0-9]* setlocal tabstop=5
+au bufnewfile,bufread ~/src/linux/man-pages/*/man*/*.[0-9]* setlocal expandtab
+au bufnewfile,bufread ~/src/linux/man-pages/*/man*/*.[0-9]* setlocal shiftwidth=4
+au bufnewfile,bufread ~/src/linux/man-pages/*/man*/*.[0-9]* setlocal softtabstop=4
+au bufnewfile,bufread ~/src/linux/man-pages/*/man*/*.[0-9]* setlocal tabstop=5
 
-au bufnewfile,bufread /srv/src/nginx/* setlocal expandtab
-au bufnewfile,bufread /srv/src/nginx/* setlocal shiftwidth=4
-au bufnewfile,bufread /srv/src/nginx/* setlocal softtabstop=4
-au bufnewfile,bufread /srv/src/nginx/* setlocal tabstop=5
+au bufnewfile,bufread ~/src/nginx/* setlocal expandtab
+au bufnewfile,bufread ~/src/nginx/* setlocal shiftwidth=4
+au bufnewfile,bufread ~/src/nginx/* setlocal softtabstop=4
+au bufnewfile,bufread ~/src/nginx/* setlocal tabstop=5
