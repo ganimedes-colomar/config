@@ -32,6 +32,14 @@ apt:
 		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
 
+.PHONY: sh
+sh:
+	cd $(SYSCONFDIR) && \
+	find profile.d/ -type f \
+	|while read f; do \
+		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(sysconfdir)/$$f"; \
+	done;
+
 .PHONY: bash
 bash:
 	cd $(HOMEDIR) && \
