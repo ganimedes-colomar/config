@@ -42,10 +42,12 @@ sh:
 
 .PHONY: bash
 bash:
-	cd $(HOMEDIR) && \
-	find .bash* -type f \
+	cd $(SYSCONFDIR) && \
+	find bash.bashrc -type f \
 	|while read f; do \
-		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
+		sed '/# alx\s*BEGIN/,/# alx\s*END/d' \
+			-i "$(DESTDIR)$(sysconfdir)/$$f" ||:; \
+		cat "$(SYSCONFDIR)/$$f" >> "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
 
 .PHONY: console
