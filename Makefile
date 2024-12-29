@@ -3,6 +3,8 @@ SHELL	= /bin/bash -Eeuo pipefail
 
 DESTDIR		=
 
+bindir		= /usr/local/bin
+BINDIR		= $(CURDIR)/bin
 HOMEDIR		= $(CURDIR)/home
 sysconfdir	= /etc
 SYSCONFDIR	= $(CURDIR)/etc
@@ -11,6 +13,16 @@ INSTALL_OPTS	= -v
 INSTALL		= install $(INSTALL_OPTS)
 INSTALL_DATA	= $(INSTALL) -m 644
 INSTALL_DIR	= $(INSTALL) -m 755 -d
+INSTALL_PROGRAM	= $(INSTALL) -m 755
+
+
+.PHONY: bin
+bin:
+	cd $(BINDIR) && \
+	find * -type f \
+	|while read f; do \
+		$(INSTALL_PROGRAM) -DT "$$f" "$(DESTDIR)$(bindir)/$$f"; \
+	done;
 
 .PHONY: apt
 apt:

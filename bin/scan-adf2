@@ -1,0 +1,3 @@
+#!/bin/sh
+
+hp-scan --dest pdf --adf --duplex -o "$@";
