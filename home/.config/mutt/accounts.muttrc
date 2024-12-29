@@ -17,6 +17,7 @@ source ~/.config/mutt/account/migadu/travel/account.muttrc
 source ~/.config/mutt/account/migadu/une/account.muttrc
 source ~/.config/mutt/account/migadu/admin/account.muttrc
 source ~/.config/mutt/account/migadu/tere/account.muttrc
+source ~/.config/mutt/account/gmail/alejandro/account.muttrc
 source ~/.config/mutt/account/gmail/alx/account.muttrc
 source ~/.config/mutt/account/gmail/colomar/account.muttrc
 
@@ -41,6 +42,7 @@ folder-hook ~/mail/migadu/travel/ source ~/.config/mutt/account/migadu/travel/ac
 folder-hook ~/mail/migadu/une/ source ~/.config/mutt/account/migadu/une/account.muttrc
 folder-hook ~/mail/migadu/admin/ source ~/.config/mutt/account/migadu/admin/account.muttrc
 folder-hook ~/mail/migadu/tere/ source ~/.config/mutt/account/migadu/tere/account.muttrc
+folder-hook ~/mail/gmail/alejandro/ source ~/.config/mutt/account/gmail/alejandro/account.muttrc
 folder-hook ~/mail/gmail/alx/ source ~/.config/mutt/account/gmail/alx/account.muttrc
 folder-hook ~/mail/gmail/colomar/ source ~/.config/mutt/account/gmail/colomar/account.muttrc
 
