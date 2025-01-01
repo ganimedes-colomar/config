@@ -2,7 +2,7 @@
 "	Alejandro Colomar Andres
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"source /usr/share/vim/vim*/defaults.vim
+let g:skip_defaults_vim = 1
 
 set colorcolumn=73,81
 set nowrap
