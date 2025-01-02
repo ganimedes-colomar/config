@@ -1,5 +1,6 @@
 set my_migadu_pass	= "`pass show email/migadu/alx/mailbox/alx/pass`"
 set my_tere_pass	= "`pass show email/migadu/alx/mailbox/tere/pass`"
 set my_korg_pass	= "`pass show www/foss/kernel/smtp/pass`"
+set my_gmail_alx_pass	= "`pass show email/gmail/alx.manpages/imap`"
 set my_gmail_alejandro_pass = "`pass show email/gmail/alejandro/imap`"
 set my_gmail_colomar_pass = "`pass show email/gmail/colomar.6.4.3/imap`"
