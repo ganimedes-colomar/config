@@ -6,7 +6,7 @@
 	lg = log --graph --abbrev=12 --decorate --date=short \
 		--format=tformat:'%C(magenta)%G?%C(reset) %C(auto)%h%C(reset) %C(white)(%ad, %cd%x3B \"%C(reset)%C(auto)%s%C(reset)%C(white)\")%C(reset)%C(auto)%d%C(reset)'
 	lg2 = log --graph --abbrev=12 --decorate --date=short \
-		--format=tformat:'%C(auto)%h%C(reset) %C(white)(%cd%x3B \"%C(reset)%C(auto)%s%C(reset)%C(white)\")%C(reset)%C(auto)%d%C(reset)%n''  %C(magenta)%G?%C(reset) %C(dim white)- %ad, %an - %cd, %cn%C(reset)'
+		--format=tformat:'%C(magenta)%G?%C(reset) %C(auto)%h%C(reset) %C(white)(%ad, %cd%x3B \"%C(reset)%C(auto)%s%C(reset)%C(white)\")%C(reset)%C(auto)%d%C(reset)%n''  %C(dim white)[%an <%ae>, %cn <%ce>]%C(reset)'
 	t = l --all
 	tree = lg --all
 	tree2 = lg2 --all
