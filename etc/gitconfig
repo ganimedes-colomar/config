@@ -4,7 +4,7 @@
 	l = log --graph --abbrev=12 --decorate --date=short \
 		--format=tformat:'%C(magenta)%G?%C(reset) %C(auto)%h%C(reset) %C(white)(%cd%x3B \"%C(reset)%C(auto)%s%C(reset)%C(white)\")%C(reset)%C(auto)%d%C(reset)'
 	lg = log --graph --abbrev=12 --decorate --date=short \
-		--format=tformat:'%C(magenta)%G?%C(reset) %C(auto)%h%C(reset) %C(white)(%ad, %cd%x3B \"%C(reset)%C(auto)%s%C(reset)%C(white)\")%C(reset)%C(auto)%d%C(reset)'
+		--format=tformat:'%C(magenta)%G?%C(reset) %C(auto)%h%C(reset) %C(white)(%ad, %cd%x3B \"%C(reset)%C(auto)%s%C(reset)%C(white)\")%C(reset)%C(auto)%d%C(reset) %C(dim white)[%an <%ae>, %cn <%ce>]%C(reset)'
 	lg2 = log --graph --abbrev=12 --decorate --date=short \
 		--format=tformat:'%C(magenta)%G?%C(reset) %C(auto)%h%C(reset) %C(white)(%ad, %cd%x3B \"%C(reset)%C(auto)%s%C(reset)%C(white)\")%C(reset)%C(auto)%d%C(reset)%n''  %C(dim white)[%an <%ae>, %cn <%ce>]%C(reset)'
 	t = l --all
