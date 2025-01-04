@@ -5,7 +5,7 @@
 		--format=tformat:'%C(auto)%h%C(reset) %C(white)(%cd%x3B \"%C(reset)%C(auto)%s%C(reset)%C(white)\")%C(reset)%C(auto)%d%C(reset)%n''  %C(magenta)%G?%C(reset) %C(dim white)- %ad, %an - %cd, %cn%C(reset)'
 	tree = lg --all
 	ref = show --no-patch --abbrev=12 --date=short \
-		--format=tformat:'%C(auto)%h (%cd%x3B%C(reset) \"%C(white)%s%C(reset)\")'
+		--format=tformat:'%C(auto)%h%C(reset) %C(white)(%cd%x3B \"%C(reset)%C(auto)%s%C(reset)%C(white)\")%C(reset)'
 	ff = merge --ff-only
 [am]
 	messageid = true
