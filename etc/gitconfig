@@ -1,5 +1,6 @@
 [alias]
-	lgo = log --graph --oneline --abbrev=12
+	lgo = log --graph --abbrev=12 --decorate --date=short \
+		--format=tformat:'%C(magenta)%G?%C(reset) %C(auto)%h%d%C(reset) %C(auto)%s%C(reset)'
 	lago = lgo --all
 	l = log --graph --abbrev=12 --decorate --date=short \
 		--format=tformat:'%C(magenta)%G?%C(reset) %C(auto)%h%C(reset) %C(white)(%cd%x3B \"%C(reset)%C(auto)%s%C(reset)%C(white)\")%C(reset)%C(auto)%d%C(reset)'
