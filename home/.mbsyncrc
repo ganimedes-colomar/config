@@ -3,7 +3,7 @@ Host imap.migadu.com
 Port 993
 User activitats@alejandro-colomar.es
 PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore migadu-activitats-remote
@@ -28,7 +28,7 @@ Host imap.migadu.com
 Port 993
 User admin@alejandro-colomar.es
 PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore migadu-admin-remote
@@ -53,7 +53,7 @@ Host imap.migadu.com
 Port 993
 User alex@alejandro-colomar.es
 PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore migadu-alex-remote
@@ -78,7 +78,7 @@ Host imap.migadu.com
 Port 993
 User alx@alejandro-colomar.es
 PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore migadu-alx-remote
@@ -103,7 +103,7 @@ Host imap.migadu.com
 Port 993
 User au@alejandro-colomar.es
 PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore migadu-au-remote
@@ -128,7 +128,7 @@ Host imap.migadu.com
 Port 993
 User banc@alejandro-colomar.es
 PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore migadu-banc-remote
@@ -153,7 +153,7 @@ Host imap.migadu.com
 Port 993
 User consulting@alejandro-colomar.es
 PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore migadu-consulting-remote
@@ -178,7 +178,7 @@ Host imap.migadu.com
 Port 993
 User digikey@alejandro-colomar.es
 PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore migadu-digikey-remote
@@ -203,7 +203,7 @@ Host imap.migadu.com
 Port 993
 User edu@alejandro-colomar.es
 PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore migadu-edu-remote
@@ -228,7 +228,7 @@ Host imap.migadu.com
 Port 993
 User esport@alejandro-colomar.es
 PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore migadu-esport-remote
@@ -253,7 +253,7 @@ Host imap.migadu.com
 Port 993
 User food@alejandro-colomar.es
 PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore migadu-food-remote
@@ -278,7 +278,7 @@ Host imap.migadu.com
 Port 993
 User foss@alejandro-colomar.es
 PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore migadu-foss-remote
@@ -303,7 +303,7 @@ Host imap.migadu.com
 Port 993
 User gov@alejandro-colomar.es
 PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore migadu-gov-remote
@@ -328,7 +328,7 @@ Host imap.migadu.com
 Port 993
 User legal@alejandro-colomar.es
 PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore migadu-legal-remote
@@ -353,7 +353,7 @@ Host imap.migadu.com
 Port 993
 User llum@alejandro-colomar.es
 PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore migadu-llum-remote
@@ -378,7 +378,7 @@ Host imap.migadu.com
 Port 993
 User spam@alejandro-colomar.es
 PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore migadu-spam-remote
@@ -403,7 +403,7 @@ Host imap.migadu.com
 Port 993
 User tlf@alejandro-colomar.es
 PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore migadu-tlf-remote
@@ -428,7 +428,7 @@ Host imap.migadu.com
 Port 993
 User travel@alejandro-colomar.es
 PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore migadu-travel-remote
@@ -453,7 +453,7 @@ Host imap.migadu.com
 Port 993
 User une@alejandro-colomar.es
 PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore migadu-une-remote
@@ -478,7 +478,7 @@ Host imap.migadu.com
 Port 993
 User tere@teresandres.es
 PassCmd "pass show email/migadu/alx/mailbox/tere/pass"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore migadu-tere-remote
@@ -503,7 +503,7 @@ Host imap.gmail.com
 Port 993
 User alx.manpages
 PassCmd "pass show email/gmail/alx.manpages/imap"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore gmail-alx-remote
@@ -528,7 +528,7 @@ Host imap.gmail.com
 Port 993
 User alejandro.colomar
 PassCmd "pass show email/gmail/alejandro.colomar/imap"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore gmail-alejandro-remote
@@ -553,7 +553,7 @@ Host imap.gmail.com
 Port 993
 User colomar.6.4.3
 PassCmd "pass show email/gmail/colomar.6.4.3/imap"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore gmail-colomar-remote
