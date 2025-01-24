@@ -7,6 +7,7 @@ source ~/.config/mutt/account/migadu/consulting/account.muttrc
 source ~/.config/mutt/account/migadu/digikey/account.muttrc
 source ~/.config/mutt/account/migadu/edu/account.muttrc
 source ~/.config/mutt/account/migadu/esport/account.muttrc
+source ~/.config/mutt/account/migadu/facturas/account.muttrc
 source ~/.config/mutt/account/migadu/food/account.muttrc
 source ~/.config/mutt/account/migadu/foss/account.muttrc
 source ~/.config/mutt/account/migadu/gov/account.muttrc
@@ -33,6 +34,7 @@ folder-hook ~/mail/migadu/consulting/ source ~/.config/mutt/account/migadu/consu
 folder-hook ~/mail/migadu/digikey/ source ~/.config/mutt/account/migadu/digikey/account.muttrc
 folder-hook ~/mail/migadu/edu/ source ~/.config/mutt/account/migadu/edu/account.muttrc
 folder-hook ~/mail/migadu/esport/ source ~/.config/mutt/account/migadu/esport/account.muttrc
+folder-hook ~/mail/migadu/facturas/ source ~/.config/mutt/account/migadu/facturas/account.muttrc
 folder-hook ~/mail/migadu/food/ source ~/.config/mutt/account/migadu/food/account.muttrc
 folder-hook ~/mail/migadu/foss/ source ~/.config/mutt/account/migadu/foss/account.muttrc
 folder-hook ~/mail/migadu/gov/ source ~/.config/mutt/account/migadu/gov/account.muttrc

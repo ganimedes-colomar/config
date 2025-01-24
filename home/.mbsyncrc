@@ -248,6 +248,31 @@ Patterns *
 SyncState *
 
 
+IMAPAccount migadu-facturas-imap
+Host imap.migadu.com
+Port 993
+User facturas@alejandro-colomar.es
+PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
+TLSType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore migadu-facturas-remote
+Account migadu-facturas-imap
+
+MaildirStore migadu-facturas-local
+Path ~/mail/migadu/facturas/
+Inbox ~/mail/migadu/facturas/Inbox
+SubFolders Verbatim
+
+Channel migadu-facturas
+Far :migadu-facturas-remote:
+Near :migadu-facturas-local:
+Create Both
+Expunge Both
+Patterns *
+SyncState *
+
+
 IMAPAccount migadu-food-imap
 Host imap.migadu.com
 Port 993
