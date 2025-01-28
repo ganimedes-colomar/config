@@ -117,6 +117,18 @@ mbsync:
 	find .mbsyncrc -type f \
 	|while read f; do \
 		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
+		cat $(DESTDIR)$(HOME)/$$f \
+		| grep PassCmd \
+		| sort \
+		| uniq \
+		| while read -r l; do \
+			echo "$$l" \
+			| cut -f2 -d'"' \
+			| cut -f3 -d ' ' \
+			| xargs pass show \
+			| xargs -I {} sed -i "s,$$l,Pass \"{}\"," \
+				$(DESTDIR)$(HOME)/$$f; \
+		done; \
 	done;
 
 .PHONY: mutt
@@ -133,6 +145,18 @@ mutt.home:
 	find .config/mutt/ -type f \
 	|while read f; do \
 		$(INSTALL_DATA) -DT "$$f" "$(DESTDIR)$(HOME)/$$f"; \
+		cat $(DESTDIR)$(HOME)/$$f \
+		| grep -o '`pass show .*`' \
+		| sort \
+		| uniq \
+		| while read -r l; do \
+			echo "$$l" \
+			| tr -d '`' \
+			| cut -f3 -d ' ' \
+			| xargs pass show \
+			| xargs -I {} sed -i "s,$$l,{}," \
+				$(DESTDIR)$(HOME)/$$f; \
+		done || true; \
 	done;
 
 .PHONY: neomutt
