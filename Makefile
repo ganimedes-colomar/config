@@ -50,6 +50,16 @@ bash:
 		cat "$(SYSCONFDIR)/$$f" >> "$(DESTDIR)$(sysconfdir)/$$f"; \
 	done;
 
+.PHONY: bash.home
+bash.home:
+	cd $(HOMEDIR) && \
+	find .bashrc -type f \
+	|while read f; do \
+		sed '/# alx\s*BEGIN/,/# alx\s*END/d' \
+			-i "$(DESTDIR)$(HOME)/$$f" ||:; \
+		cat "$(HOMEDIR)/$$f" >> "$(DESTDIR)$(HOME)/$$f"; \
+	done;
+
 .PHONY: console
 console:
 	cd $(SYSCONFDIR) && \
