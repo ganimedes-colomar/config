@@ -42,4 +42,4 @@
 [pull]
 	ff = only
 [sendemail]
-	sendmailcmd = mutt -H - && true
+	sendmailcmd = neomutt -C -H - && true
