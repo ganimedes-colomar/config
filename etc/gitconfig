@@ -20,9 +20,6 @@
 	messageid = true
 [checkout]
 	DefaultRemote = alx
-[color "diff"]
-	old = brightred
-	new = brightgreen
 [commit]
 	gpgSign = true
 [core]
