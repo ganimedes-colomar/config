@@ -1,15 +1,21 @@
 # alx BEGIN
+alx-bak-g	/dev/sdb1	none	noauto
+alx-bak-s	/dev/sdb2	none	noauto
+alx-bak-p	/dev/sdb3	none	noauto
+alx-bak-m	/dev/sdb4	none	noauto
+alx-bak-a	/dev/sdb5	none	noauto
+
 alx-usb-g	/dev/sda1	none	noauto
 alx-usb-s	/dev/sda2	none	noauto
 alx-usb-p	/dev/sda3	none	noauto
 alx-usb-m	/dev/sda4	none	noauto
 alx-usb-a	/dev/sda5	none	noauto
 
-alx-k-g	/dev/mmcblk0p1	none	noauto
-alx-k-s	/dev/mmcblk0p2	none	noauto
-alx-k-p	/dev/mmcblk0p3	none	noauto
-alx-k-m	/dev/mmcblk0p4	none	noauto
-alx-k-a	/dev/mmcblk0p5	none	noauto
+alx-sd-g	/dev/mmcblk0p1	none	noauto
+alx-sd-s	/dev/mmcblk0p2	none	noauto
+alx-sd-p	/dev/mmcblk0p3	none	noauto
+alx-sd-m	/dev/mmcblk0p4	none	noauto
+alx-sd-a	/dev/mmcblk0p5	none	noauto
 
 alx-opt	/dev/nvme0n1p4	none	noauto
 alx-srv	/dev/nvme0n1p5	none	noauto
