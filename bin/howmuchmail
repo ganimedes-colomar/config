@@ -1,0 +1,7 @@
+#!/bin/sh
+
+find /home/alx/mail/ -type d \
+| grep /new \
+| grep Inbox \
+| xargs -I {} find {} -type f \
+| wc -l;

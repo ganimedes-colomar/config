@@ -1,0 +1,20 @@
+#!/bin/sh
+
+find ~/mail/migadu/ -type d \
+| grep /Inbox/cur$ \
+| xargs -I {} find {} -type f \
+| grep -v ':[0-9]*,[A-Z]*S' \
+| cut -f6 -d/ \
+| sort \
+| uniq -c \
+| tr '\n' '\t';
+
+printf '\t|\t';
+
+find ~/mail/migadu/ -type d \
+| grep /Inbox/new$ \
+| xargs -I {} find {} -type f \
+| cut -f6 -d/ \
+| sort \
+| uniq -c \
+| tr '\n' '\t';
