@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e;
+
+if test "$PINENTRY_USER_DATA" = "curses"; then
+	MY_PINENTRY=/usr/bin/pinentry-curses;
+else
+	MY_PINENTRY=/usr/bin/pinentry;
+fi;
+
+exec "$MY_PINENTRY";
