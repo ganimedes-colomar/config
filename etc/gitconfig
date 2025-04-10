@@ -16,6 +16,7 @@
 	ref2 = show --no-patch --abbrev=12 --date=short \
 		--format=tformat:'%C(auto)%h%C(reset) %C(white)(%ad, %cd%x3B \"%C(reset)%C(auto)%s%C(reset)%C(white)\")%C(reset)'
 	ff = merge --ff-only
+	rd = range-diff master..@{u} master@{u}..HEAD
 [am]
 	messageid = true
 [checkout]
