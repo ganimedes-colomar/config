@@ -1,5 +1,3 @@
 set spoolfile	= "+INBOX"
 set postponed	= "+[Gmail]/Drafts"
 set trash	= "+[Gmail]/Trash"
-
-mailboxes	"+[Gmail]/All Mail" $spoolfile $postponed $trash "+[Gmail]/Spam" "+[Gmail]/Important" "+[Gmail]/Sent Mail" "+[Gmail]/Starred"

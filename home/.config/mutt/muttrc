@@ -1,3 +1,4 @@
+source ~/.config/mutt/mailboxes.muttrc
 source ~/.config/mutt/pass.muttrc
 source ~/.config/mutt/accounts.muttrc
 source ~/.config/mutt/crypt.muttrc

@@ -1,0 +1,1 @@
+mailboxes `find /home/alx/mail/ -type d -print0 | grep -az '/cur$' | xargs -0 dirname | sed 's/.*/"&"/' | tr '\n' ' '`
