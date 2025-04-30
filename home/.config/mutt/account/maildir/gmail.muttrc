@@ -3,4 +3,4 @@ set postponed	= "+[Gmail]/Drafts"
 set record	= "+INBOX"
 set trash	= "+[Gmail]/Trash"
 
-mailboxes	"+[Gmail]/All Mail" $spoolfile $postponed $record $trash "+[Gmail]/Spam" "+[Gmail]/Important" "+[Gmail]/Sent Mail" "+[Gmail]/Starred"
+mailboxes	"+[Gmail]/All Mail" $spoolfile $postponed $trash "+[Gmail]/Spam" "+[Gmail]/Important" "+[Gmail]/Sent Mail" "+[Gmail]/Starred"
