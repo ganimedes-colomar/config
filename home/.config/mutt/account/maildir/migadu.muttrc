@@ -3,4 +3,6 @@ set postponed	= "+Drafts"
 set record	= "+Inbox"
 set trash	= "+Trash"
 
-mailboxes	$spoolfile $postponed $record $trash "+Junk" "+Archive" "+Sent"
+set my_topics   = `find $folder -type d | grep '/cur$' | xargs dirname | xargs basename -a | grep -v '^[A-Z]' | sed 's/^/+/'`
+
+mailboxes	$spoolfile $postponed $record $trash "+Junk" "+Archive" "+Sent" $my_topics
