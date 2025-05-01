@@ -13,6 +13,7 @@ source ~/.config/mutt/account/migadu/foss/account.muttrc
 source ~/.config/mutt/account/migadu/gov/account.muttrc
 source ~/.config/mutt/account/migadu/legal/account.muttrc
 source ~/.config/mutt/account/migadu/llum/account.muttrc
+source ~/.config/mutt/account/migadu/shop/account.muttrc
 source ~/.config/mutt/account/migadu/spam/account.muttrc
 source ~/.config/mutt/account/migadu/tlf/account.muttrc
 source ~/.config/mutt/account/migadu/travel/account.muttrc
@@ -40,6 +41,7 @@ folder-hook ~/mail/migadu/foss/ source ~/.config/mutt/account/migadu/foss/accoun
 folder-hook ~/mail/migadu/gov/ source ~/.config/mutt/account/migadu/gov/account.muttrc
 folder-hook ~/mail/migadu/legal/ source ~/.config/mutt/account/migadu/legal/account.muttrc
 folder-hook ~/mail/migadu/llum/ source ~/.config/mutt/account/migadu/llum/account.muttrc
+folder-hook ~/mail/migadu/shop/ source ~/.config/mutt/account/migadu/shop/account.muttrc
 folder-hook ~/mail/migadu/spam/ source ~/.config/mutt/account/migadu/spam/account.muttrc
 folder-hook ~/mail/migadu/tlf/ source ~/.config/mutt/account/migadu/tlf/account.muttrc
 folder-hook ~/mail/migadu/travel/ source ~/.config/mutt/account/migadu/travel/account.muttrc
