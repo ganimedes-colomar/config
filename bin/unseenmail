@@ -7,7 +7,8 @@ find ~/mail/migadu/ -type d \
 | cut -f6 -d/ \
 | sort \
 | uniq -c \
-| tr '\n' '\t';
+| tr '\n' '  ' \
+| sed 's/\s\s\s*/    /g';
 
 printf '\t|\t';
 
@@ -17,4 +18,5 @@ find ~/mail/migadu/ -type d \
 | cut -f6 -d/ \
 | sort \
 | uniq -c \
-| tr '\n' '\t';
+| tr '\n' '  ' \
+| sed 's/\s\s\s*/    /g';
