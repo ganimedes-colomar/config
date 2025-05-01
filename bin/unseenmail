@@ -1,10 +1,12 @@
 #!/bin/sh
 
 find ~/mail/migadu/ -type d \
-| grep /Inbox/cur$ \
+| grep -v -e /Archive -e /Drafts -e /Junk -e /Sent -e /Trash \
+| grep /cur$ \
 | xargs -I {} find {} -type f \
 | grep -v ':[0-9]*,[A-Z]*S' \
-| cut -f6 -d/ \
+| cut -f6,7 -d/ \
+| sed 's,/Inbox$,,' \
 | sort \
 | uniq -c \
 | tr '\n' '  ' \
@@ -13,9 +15,11 @@ find ~/mail/migadu/ -type d \
 printf '\t|\t';
 
 find ~/mail/migadu/ -type d \
-| grep /Inbox/new$ \
+| grep -v -e /Archive -e /Drafts -e /Junk -e /Sent -e /Trash \
+| grep /new$ \
 | xargs -I {} find {} -type f \
-| cut -f6 -d/ \
+| cut -f6,7 -d/ \
+| sed 's,/Inbox$,,' \
 | sort \
 | uniq -c \
 | tr '\n' '  ' \
