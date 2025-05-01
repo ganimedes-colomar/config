@@ -51,3 +51,5 @@ folder-hook ~/mail/migadu/tere/ source ~/.config/mutt/account/migadu/tere/accoun
 folder-hook ~/mail/gmail/alejandro/ source ~/.config/mutt/account/gmail/alejandro/account.muttrc
 folder-hook ~/mail/gmail/alx/ source ~/.config/mutt/account/gmail/alx/account.muttrc
 folder-hook ~/mail/gmail/colomar/ source ~/.config/mutt/account/gmail/colomar/account.muttrc
+
+folder-hook . source ~/.config/mutt/from.muttrc

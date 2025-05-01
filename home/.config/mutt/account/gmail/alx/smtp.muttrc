@@ -1,4 +1,4 @@
-set from	= "alx.manpages@gmail.com"
+set my_from	= "alx.manpages@gmail.com"
 set realname	= "Alejandro Colomar"
 
 set smtp_url	= "smtps://alx.manpages@smtp.gmail.com:465/"

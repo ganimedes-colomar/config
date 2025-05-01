@@ -1,4 +1,4 @@
-set from	= "tlf@alejandro-colomar.es"
+set my_from	= "tlf@alejandro-colomar.es"
 set realname	= "Alejandro Colomar"
 
 set smtp_url	= "smtps://tlf@alejandro-colomar.es@smtp.migadu.com:465/"
