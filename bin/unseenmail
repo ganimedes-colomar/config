@@ -1,6 +1,6 @@
 #!/bin/sh
 
-find ~/mail/migadu/ -type d \
+find ~/mail/migadu/ ~/mail/kernel/ -type d \
 | grep -v -e /Archive -e /Drafts -e /Junk -e /Sent -e /Trash \
 | grep /cur$ \
 | xargs -I {} find {} -type f \
@@ -14,7 +14,7 @@ find ~/mail/migadu/ -type d \
 
 printf '\t|\t';
 
-find ~/mail/migadu/ -type d \
+find ~/mail/migadu/ ~/mail/kernel/ -type d \
 | grep -v -e /Archive -e /Drafts -e /Junk -e /Sent -e /Trash \
 | grep /new$ \
 | xargs -I {} find {} -type f \
