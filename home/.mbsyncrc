@@ -560,8 +560,8 @@ IMAPStore gmail-alx-remote
 Account gmail-alx-imap
 
 MaildirStore gmail-alx-local
-Path ~/mail/gmail/alx/
-Inbox ~/mail/gmail/alx/INBOX
+Path ~/mail/gmail/alx.manpages/
+Inbox ~/mail/gmail/alx.manpages/INBOX
 SubFolders Verbatim
 
 Channel gmail-alx
@@ -585,8 +585,8 @@ IMAPStore gmail-alejandro-remote
 Account gmail-alejandro-imap
 
 MaildirStore gmail-alejandro-local
-Path ~/mail/gmail/alejandro/
-Inbox ~/mail/gmail/alejandro/INBOX
+Path ~/mail/gmail/alejandro.colomar/
+Inbox ~/mail/gmail/alejandro.colomar/INBOX
 SubFolders Verbatim
 
 Channel gmail-alejandro
@@ -610,8 +610,8 @@ IMAPStore gmail-colomar-remote
 Account gmail-colomar-imap
 
 MaildirStore gmail-colomar-local
-Path ~/mail/gmail/colomar/
-Inbox ~/mail/gmail/colomar/INBOX
+Path ~/mail/gmail/colomar.6.4.3/
+Inbox ~/mail/gmail/colomar.6.4.3/INBOX
 SubFolders Verbatim
 
 Channel gmail-colomar
