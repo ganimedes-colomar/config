@@ -1,5 +1,4 @@
 set my_from	= "tere@teresandres.es"
-set realname	= "Teresa Andres"
 
 set smtp_url	= "smtps://tere@teresandres.es@smtp.migadu.com:465/"
 set smtp_pass	= $my_tere_pass
