@@ -1,4 +1,0 @@
-set my_from	= "alejandro.colomar@gmail.com"
-
-set smtp_url	= "smtps://alejandro.colomar@smtp.gmail.com:465/"
-set smtp_pass	= $my_gmail_alejandro_pass

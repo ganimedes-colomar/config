@@ -1,0 +1,13 @@
+set folder = `echo $record | grep -o '/home/alx/mail/[^/]*/[^/]*/'`
+
+set my_user = `echo $folder | sed 's|/home/alx/mail/[^/]*/||' | tr -d /`
+set my_from = "$my_user@gmail.com"
+
+set smtp_url = "smtps://$my_user@smtp.gmail.com:465/"
+source ~/.config/mutt/account/gmail/$my_user/pass.muttrc
+
+set spoolfile	= "+INBOX"
+set postponed	= "+[Gmail]/Drafts"
+set trash	= "+[Gmail]/Trash"
+
+source ~/.config/mutt/crypt/auto.muttrc

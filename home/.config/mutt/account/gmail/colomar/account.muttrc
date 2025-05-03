@@ -1,4 +1,0 @@
-source ~/.config/mutt/account/gmail/colomar/smtp.muttrc
-source ~/.config/mutt/account/gmail/colomar/folder.muttrc
-source ~/.config/mutt/account/maildir/gmail.muttrc
-source ~/.config/mutt/crypt/auto.muttrc
