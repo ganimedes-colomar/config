@@ -1,7 +1,7 @@
 set folder = "/home/alx/mail/kernel/foss/"
 
 set my_user = "alx"
-set my_from = "$my_user@kernel.org"
+set my_host = "kernel.org"
 
 set smtp_url = "smtps://$my_user@mail.kernel.org:465/"
 set smtp_pass = $my_korg_pass

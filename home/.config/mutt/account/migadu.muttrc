@@ -1,9 +1,9 @@
 set folder = `echo $record | grep -o '/home/alx/mail/[^/]*/[^/]*/'`
 
 set my_user = `echo $folder | sed 's|/home/alx/mail/[^/]*/||' | tr -d /`
-set my_from = "$my_user@alejandro-colomar.es"
+set my_host = "alejandro-colomar.es"
 
-set smtp_url = "smtps://$my_user@alejandro-colomar.es@smtp.migadu.com:465/"
+set smtp_url = "smtps://$my_user@$my_host@smtp.migadu.com:465/"
 set smtp_pass = $my_migadu_pass
 
 set spoolfile	= "+Inbox"

@@ -1,4 +1,4 @@
 set my_topic = `echo $record | grep migadu | xargs basename | grep -v '^[A-Z]' | sed 's/./+&/'`
-set from = `printf '%s\n' $my_from | sed "s|@|$my_topic@|"`
 
+set from = "$my_user$my_topic@$my_host"
 set realname = "Alejandro Colomar"
