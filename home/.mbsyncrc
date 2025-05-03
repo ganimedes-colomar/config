@@ -310,8 +310,8 @@ IMAPStore migadu-foss-remote
 Account migadu-foss-imap
 
 MaildirStore migadu-foss-local
-Path ~/mail/migadu/foss/
-Inbox ~/mail/migadu/foss/Inbox
+Path ~/mail/kernel/foss/
+Inbox ~/mail/kernel/foss/Inbox
 SubFolders Verbatim
 
 Channel migadu-foss

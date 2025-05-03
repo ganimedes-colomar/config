@@ -9,7 +9,6 @@ source ~/.config/mutt/account/migadu/edu/account.muttrc
 source ~/.config/mutt/account/migadu/esport/account.muttrc
 source ~/.config/mutt/account/migadu/facturas/account.muttrc
 source ~/.config/mutt/account/migadu/food/account.muttrc
-source ~/.config/mutt/account/migadu/foss/account.muttrc
 source ~/.config/mutt/account/migadu/gov/account.muttrc
 source ~/.config/mutt/account/migadu/legal/account.muttrc
 source ~/.config/mutt/account/migadu/llum/account.muttrc
@@ -21,7 +20,7 @@ source ~/.config/mutt/account/migadu/une/account.muttrc
 source ~/.config/mutt/account/migadu/admin/account.muttrc
 source ~/.config/mutt/account/migadu/tere/account.muttrc
 
-source ~/.config/mutt/account/migadu/foss/account.muttrc
+source ~/.config/mutt/account/kernel.muttrc
 
 folder-hook ~/mail/migadu/activitats/ source ~/.config/mutt/account/migadu/activitats/account.muttrc
 folder-hook ~/mail/migadu/alex/ source ~/.config/mutt/account/migadu/alex/account.muttrc
@@ -34,7 +33,6 @@ folder-hook ~/mail/migadu/edu/ source ~/.config/mutt/account/migadu/edu/account.
 folder-hook ~/mail/migadu/esport/ source ~/.config/mutt/account/migadu/esport/account.muttrc
 folder-hook ~/mail/migadu/facturas/ source ~/.config/mutt/account/migadu/facturas/account.muttrc
 folder-hook ~/mail/migadu/food/ source ~/.config/mutt/account/migadu/food/account.muttrc
-folder-hook ~/mail/migadu/foss/ source ~/.config/mutt/account/migadu/foss/account.muttrc
 folder-hook ~/mail/migadu/gov/ source ~/.config/mutt/account/migadu/gov/account.muttrc
 folder-hook ~/mail/migadu/legal/ source ~/.config/mutt/account/migadu/legal/account.muttrc
 folder-hook ~/mail/migadu/llum/ source ~/.config/mutt/account/migadu/llum/account.muttrc
@@ -45,6 +43,7 @@ folder-hook ~/mail/migadu/travel/ source ~/.config/mutt/account/migadu/travel/ac
 folder-hook ~/mail/migadu/une/ source ~/.config/mutt/account/migadu/une/account.muttrc
 folder-hook ~/mail/migadu/admin/ source ~/.config/mutt/account/migadu/admin/account.muttrc
 folder-hook ~/mail/migadu/tere/ source ~/.config/mutt/account/migadu/tere/account.muttrc
+folder-hook ~/mail/kernel/ source ~/.config/mutt/account/kernel.muttrc
 folder-hook ~/mail/gmail/ source ~/.config/mutt/account/gmail.muttrc
 
 folder-hook . source ~/.config/mutt/from.muttrc
