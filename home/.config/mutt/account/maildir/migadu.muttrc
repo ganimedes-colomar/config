@@ -1,3 +1,0 @@
-set spoolfile	= "+Inbox"
-set postponed	= "+Drafts"
-set trash	= "+Trash"

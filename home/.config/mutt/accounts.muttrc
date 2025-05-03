@@ -1,48 +1,6 @@
-source ~/.config/mutt/account/migadu/activitats/account.muttrc
-source ~/.config/mutt/account/migadu/alex/account.muttrc
-source ~/.config/mutt/account/migadu/alx/account.muttrc
-source ~/.config/mutt/account/migadu/au/account.muttrc
-source ~/.config/mutt/account/migadu/banc/account.muttrc
-source ~/.config/mutt/account/migadu/consulting/account.muttrc
-source ~/.config/mutt/account/migadu/digikey/account.muttrc
-source ~/.config/mutt/account/migadu/edu/account.muttrc
-source ~/.config/mutt/account/migadu/esport/account.muttrc
-source ~/.config/mutt/account/migadu/facturas/account.muttrc
-source ~/.config/mutt/account/migadu/food/account.muttrc
-source ~/.config/mutt/account/migadu/gov/account.muttrc
-source ~/.config/mutt/account/migadu/legal/account.muttrc
-source ~/.config/mutt/account/migadu/llum/account.muttrc
-source ~/.config/mutt/account/migadu/shop/account.muttrc
-source ~/.config/mutt/account/migadu/spam/account.muttrc
-source ~/.config/mutt/account/migadu/tlf/account.muttrc
-source ~/.config/mutt/account/migadu/travel/account.muttrc
-source ~/.config/mutt/account/migadu/une/account.muttrc
-source ~/.config/mutt/account/migadu/admin/account.muttrc
-source ~/.config/mutt/account/migadu/tere/account.muttrc
-
 source ~/.config/mutt/account/kernel.muttrc
 
-folder-hook ~/mail/migadu/activitats/ source ~/.config/mutt/account/migadu/activitats/account.muttrc
-folder-hook ~/mail/migadu/alex/ source ~/.config/mutt/account/migadu/alex/account.muttrc
-folder-hook ~/mail/migadu/alx/ source ~/.config/mutt/account/migadu/alx/account.muttrc
-folder-hook ~/mail/migadu/au/ source ~/.config/mutt/account/migadu/au/account.muttrc
-folder-hook ~/mail/migadu/banc/ source ~/.config/mutt/account/migadu/banc/account.muttrc
-folder-hook ~/mail/migadu/consulting/ source ~/.config/mutt/account/migadu/consulting/account.muttrc
-folder-hook ~/mail/migadu/digikey/ source ~/.config/mutt/account/migadu/digikey/account.muttrc
-folder-hook ~/mail/migadu/edu/ source ~/.config/mutt/account/migadu/edu/account.muttrc
-folder-hook ~/mail/migadu/esport/ source ~/.config/mutt/account/migadu/esport/account.muttrc
-folder-hook ~/mail/migadu/facturas/ source ~/.config/mutt/account/migadu/facturas/account.muttrc
-folder-hook ~/mail/migadu/food/ source ~/.config/mutt/account/migadu/food/account.muttrc
-folder-hook ~/mail/migadu/gov/ source ~/.config/mutt/account/migadu/gov/account.muttrc
-folder-hook ~/mail/migadu/legal/ source ~/.config/mutt/account/migadu/legal/account.muttrc
-folder-hook ~/mail/migadu/llum/ source ~/.config/mutt/account/migadu/llum/account.muttrc
-folder-hook ~/mail/migadu/shop/ source ~/.config/mutt/account/migadu/shop/account.muttrc
-folder-hook ~/mail/migadu/spam/ source ~/.config/mutt/account/migadu/spam/account.muttrc
-folder-hook ~/mail/migadu/tlf/ source ~/.config/mutt/account/migadu/tlf/account.muttrc
-folder-hook ~/mail/migadu/travel/ source ~/.config/mutt/account/migadu/travel/account.muttrc
-folder-hook ~/mail/migadu/une/ source ~/.config/mutt/account/migadu/une/account.muttrc
-folder-hook ~/mail/migadu/admin/ source ~/.config/mutt/account/migadu/admin/account.muttrc
-folder-hook ~/mail/migadu/tere/ source ~/.config/mutt/account/migadu/tere/account.muttrc
+folder-hook ~/mail/migadu/ source ~/.config/mutt/account/migadu.muttrc
 folder-hook ~/mail/kernel/ source ~/.config/mutt/account/kernel.muttrc
 folder-hook ~/mail/gmail/ source ~/.config/mutt/account/gmail.muttrc
 

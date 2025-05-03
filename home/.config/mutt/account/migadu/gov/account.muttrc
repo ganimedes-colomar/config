@@ -1,4 +1,0 @@
-source ~/.config/mutt/account/migadu/gov/smtp.muttrc
-source ~/.config/mutt/account/migadu/gov/folder.muttrc
-source ~/.config/mutt/account/maildir/migadu.muttrc
-source ~/.config/mutt/crypt/auto.muttrc

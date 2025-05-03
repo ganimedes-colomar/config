@@ -1,4 +1,0 @@
-set my_from	= "une@alejandro-colomar.es"
-
-set smtp_url	= "smtps://une@alejandro-colomar.es@smtp.migadu.com:465/"
-set smtp_pass	= $my_migadu_pass
