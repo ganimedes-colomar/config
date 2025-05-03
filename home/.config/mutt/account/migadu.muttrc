@@ -9,5 +9,3 @@ set smtp_pass = $my_migadu_pass
 set spoolfile	= "+Inbox"
 set postponed	= "+Drafts"
 set trash	= "+Trash"
-
-source ~/.config/mutt/crypt/auto.muttrc
