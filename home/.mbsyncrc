@@ -448,6 +448,31 @@ Patterns *
 SyncState *
 
 
+IMAPAccount migadu-srv-imap
+Host imap.migadu.com
+Port 993
+User srv@alejandro-colomar.es
+PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
+TLSType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore migadu-srv-remote
+Account migadu-srv-imap
+
+MaildirStore migadu-srv-local
+Path ~/mail/migadu/srv/
+Inbox ~/mail/migadu/srv/Inbox
+SubFolders Verbatim
+
+Channel migadu-srv
+Far :migadu-srv-remote:
+Near :migadu-srv-local:
+Create Both
+Expunge Both
+Patterns *
+SyncState *
+
+
 IMAPAccount migadu-tlf-imap
 Host imap.migadu.com
 Port 993
