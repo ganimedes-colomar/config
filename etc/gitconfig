@@ -39,6 +39,8 @@
 	useAutoBase = whenAble
 [init]
 	defaultBranch = main
+[log]
+	date = iso
 [pager]
 	status = true
 	log = less -S
