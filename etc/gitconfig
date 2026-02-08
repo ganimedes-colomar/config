@@ -1,21 +1,21 @@
 [alias]
-	lo = log --date=short \
+	lo = log \
 		--format=tformat:'%C(magenta)%G?%C(reset) %C(auto)%h%d%C(reset) %C(auto)%s%C(reset)'
 	lgo = lo --graph
 	lago = lgo --all
-	l = log --graph --date=short \
-		--format=tformat:'%C(magenta)%G?%C(reset) %C(auto)%h%C(reset) %C(dim white)(%cd%x3B \"%C(reset)%C(auto)%s%C(reset)%C(dim white)\")%C(reset)%C(auto)%d%C(reset)'
-	lg = log --graph --date=short \
-		--format=tformat:'%C(magenta)%G?%C(reset) %C(auto)%h%C(reset) %C(dim white)(%ad, %cd%x3B \"%C(reset)%C(auto)%s%C(reset)%C(dim white)\")%C(reset)%C(auto)%d%C(reset) %C(white)[%an <%ae>, %cn <%ce>]%C(reset)'
-	lg2 = log --graph --date=short \
-		--format=tformat:'%C(magenta)%G?%C(reset) %C(auto)%h%C(reset) %C(dim white)(%ad, %cd%x3B \"%C(reset)%C(auto)%s%C(reset)%C(dim white)\")%C(reset)%C(auto)%d%C(reset)%n''  %C(white)[%an <%ae>, %cn <%ce>]%C(reset)'
+	l = log --graph \
+		--format=tformat:'%C(magenta)%G?%C(reset) %C(auto)%h%C(reset) %C(dim white)(%cs%x3B \"%C(reset)%C(auto)%s%C(reset)%C(dim white)\")%C(reset)%C(auto)%d%C(reset)'
+	lg = log --graph \
+		--format=tformat:'%C(magenta)%G?%C(reset) %C(auto)%h%C(reset) %C(dim white)(%as, %cs%x3B \"%C(reset)%C(auto)%s%C(reset)%C(dim white)\")%C(reset)%C(auto)%d%C(reset) %C(white)[%an <%ae>, %cn <%ce>]%C(reset)'
+	lg2 = log --graph \
+		--format=tformat:'%C(magenta)%G?%C(reset) %C(auto)%h%C(reset) %C(dim white)(%as, %cs%x3B \"%C(reset)%C(auto)%s%C(reset)%C(dim white)\")%C(reset)%C(auto)%d%C(reset)%n''  %C(white)[%an <%ae>, %cn <%ce>]%C(reset)'
 	t = l --all
 	tree = lg --all
 	tree2 = lg2 --all
-	ref = show --no-patch --date=short \
-		--format=tformat:'%C(auto)%h%C(reset) %C(dim white)(%cd%x3B \"%C(reset)%C(auto)%s%C(reset)%C(dim white)\")%C(reset)'
-	ref2 = show --no-patch --date=short \
-		--format=tformat:'%C(auto)%h%C(reset) %C(dim white)(%ad, %cd%x3B \"%C(reset)%C(auto)%s%C(reset)%C(dim white)\")%C(reset)'
+	ref = show --no-patch \
+		--format=tformat:'%C(auto)%h%C(reset) %C(dim white)(%cs%x3B \"%C(reset)%C(auto)%s%C(reset)%C(dim white)\")%C(reset)'
+	ref2 = show --no-patch \
+		--format=tformat:'%C(auto)%h%C(reset) %C(dim white)(%as, %cs%x3B \"%C(reset)%C(auto)%s%C(reset)%C(dim white)\")%C(reset)'
 	ff = merge --ff-only
 	rd = range-diff master..@{u} master@{u}..HEAD
 [am]
