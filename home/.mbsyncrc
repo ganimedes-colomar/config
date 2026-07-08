@@ -248,6 +248,31 @@ Patterns *
 SyncState *
 
 
+IMAPAccount migadu-events-imap
+Host imap.migadu.com
+Port 993
+User events@alejandro-colomar.es
+PassCmd "pass show email/migadu/alx/mailbox/alx/pass"
+TLSType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore migadu-events-remote
+Account migadu-events-imap
+
+MaildirStore migadu-events-local
+Path ~/mail/migadu/events/
+Inbox ~/mail/migadu/events/Inbox
+SubFolders Verbatim
+
+Channel migadu-events
+Far :migadu-events-remote:
+Near :migadu-events-local:
+Create Both
+Expunge Both
+Patterns *
+SyncState *
+
+
 IMAPAccount migadu-facturas-imap
 Host imap.migadu.com
 Port 993
