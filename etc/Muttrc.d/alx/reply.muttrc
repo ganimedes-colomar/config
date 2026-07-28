@@ -1,1 +1,1 @@
-set attribution_intro = "On %{%FT%T%Z}, %n wrote:"
+set attribution = "On %{%FT%T%Z}, %n wrote:"
