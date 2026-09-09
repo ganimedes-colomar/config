@@ -33,10 +33,7 @@ ExposeAuthInfo			no
 FingerprintHash			sha256
 #ForceCommand
 GatewayPorts			no
-GSSAPIAuthentication		no
 
-GSSAPICleanupCredentials	yes
-GSSAPIStrictAcceptorCheck	yes
 HostbasedAcceptedKeyTypes	rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-512
 HostbasedAuthentication		no
 HostbasedUsesNameFromPacketOnly	no
